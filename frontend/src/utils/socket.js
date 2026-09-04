@@ -7,7 +7,14 @@ import { io } from "socket.io-client";
 
 const SOCKET_URL =
     import.meta.env.VITE_SOCKET_URL ||
-    `${window.location.protocol}//${window.location.hostname}:3000`;
+    (
+        window.location.hostname === "localhost" ||
+        window.location.hostname.startsWith("192.168.") ||
+        window.location.hostname.startsWith("10.") ||
+        window.location.hostname.startsWith("172.")
+    )
+        ? `${window.location.protocol}//${window.location.hostname}:3000`
+        : "https://multigram.onrender.com";
 
 
 // ==========================================
