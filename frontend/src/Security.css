@@ -1,0 +1,325 @@
+/* ==========================================
+   PAGE
+========================================== */
+
+.security-page {
+    width: 100%;
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    background: #fafafa;
+
+    color: #262626;
+
+    overflow-x: hidden;
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.security-nav {
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 0 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 20;
+}
+
+
+.security-nav h1 {
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: #111111;
+}
+
+
+.security-back-btn {
+    width: 36px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #262626;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   SECTION
+========================================== */
+
+.security-section {
+    width: 100%;
+
+    margin-top: 8px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #eeeeee;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.security-section h2 {
+    padding: 17px 15px 12px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #555555;
+}
+
+
+/* ==========================================
+   ROW
+========================================== */
+
+.security-row {
+    width: 100%;
+
+    min-height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 13px 15px;
+
+    border-top: 1px solid #eeeeee;
+
+    background: #ffffff;
+
+    cursor: pointer;
+}
+
+
+.security-row:hover {
+    background: #fafafa;
+}
+
+
+.security-row > div {
+    flex: 1;
+}
+
+
+.security-row strong {
+    display: block;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #222222;
+}
+
+
+.security-row p {
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    line-height: 1.35;
+
+    color: #777777;
+}
+
+
+.security-row > svg {
+    flex-shrink: 0;
+
+    font-size: 20px;
+
+    color: #999999;
+}
+
+
+/* ==========================================
+   SWITCH ROW
+========================================== */
+
+.security-switch-row {
+    width: 100%;
+
+    min-height: 68px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 13px 15px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+.security-switch-row > div {
+    flex: 1;
+}
+
+
+.security-switch-row strong {
+    display: block;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #222222;
+}
+
+
+.security-switch-row p {
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    line-height: 1.35;
+
+    color: #777777;
+}
+
+
+/* ==========================================
+   TOGGLE
+========================================== */
+
+.security-toggle {
+    width: 48px;
+
+    height: 28px;
+
+    padding: 3px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: #d1d1d1;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.security-toggle span {
+    width: 22px;
+
+    height: 22px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+
+    transform: translateX(0);
+
+    transition: 0.2s ease;
+}
+
+
+.security-toggle.active {
+    background: #0095f6;
+}
+
+
+.security-toggle.active span {
+    transform: translateX(20px);
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 470px) {
+
+    .security-page {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    .security-nav {
+        padding: 0 12px;
+    }
+
+
+    .security-section h2 {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .security-row,
+    .security-switch-row {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+}
+
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media (min-width: 471px) {
+
+    .security-page {
+        width: 470px;
+    }
+
+}

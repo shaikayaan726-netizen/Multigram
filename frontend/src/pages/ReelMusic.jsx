@@ -1,0 +1,3 @@
+import {useState} from "react";import {FiMusic,FiSearch,FiX} from "react-icons/fi";
+function ReelMusic({selected,onSelect,onClose}){const[q,setQ]=useState("");const list=["Tera Mera Rishta","Broken Heart","Heeriye","Perfect","Trending Beat","Sad Tune"];return <div className="reel-panel"><header><h2>Music</h2><button onClick={onClose}><FiX/></button></header><div className="panel-search"><FiSearch/><input value={q} onChange={e=>setQ(e.target.value)} placeholder="Search music"/></div>{list.filter(x=>x.toLowerCase().includes(q.toLowerCase())).map(x=><button className="music-item" key={x} onClick={()=>onSelect({title:x,artist:"Instagram music"})}><FiMusic/><span><b>{x}</b><small>Instagram music</small></span></button>)}</div>}
+export default ReelMusic;

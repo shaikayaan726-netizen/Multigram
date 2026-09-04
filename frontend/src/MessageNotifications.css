@@ -1,0 +1,105 @@
+.mn-page {
+    width: 100%;
+    max-width: 470px;
+    min-height: 100vh;
+    margin: auto;
+    background: #ffffff;
+    color: #262626;
+}
+
+.mn-nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 0 15px;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 20;
+}
+
+.mn-nav h1 {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.mn-back {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.mn-section {
+    padding: 25px 29px 18px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.mn-section h2 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.mn-radio-option {
+    width: 100%;
+    min-height: 55px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-size: 17px;
+    color: #3c3c3c;
+    cursor: pointer;
+    text-align: left;
+}
+
+.mn-radio {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #8e9399;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mn-radio.selected {
+    border-color: #111111;
+}
+
+.mn-radio.selected > span {
+    width: 20px;
+    height: 20px;
+    background: #111111;
+    border-radius: 50%;
+}
+
+.mn-section p {
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #8a8a8a;
+    line-height: 1.35;
+}
+
+@media (max-width: 470px) {
+
+    .mn-page {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .mn-nav {
+        height: 58px;
+        padding: 0 12px;
+    }
+}

@@ -1,0 +1,207 @@
+.story-camera-page {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #000;
+
+    overflow: hidden;
+}
+
+
+.story-camera-video {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    background: #000;
+}
+
+
+.story-camera-top {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 15px;
+
+    z-index: 10;
+}
+
+
+.story-camera-top button {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    color: #fff;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+
+.story-camera-bottom {
+    position: absolute;
+
+    left: 0;
+    bottom: 25px;
+
+    width: 100%;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 10;
+}
+
+
+.story-camera-gallery,
+.story-camera-switch {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    color: #fff;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+
+.story-camera-capture {
+    width: 82px;
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 5px solid #fff;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+.story-camera-capture span {
+    width: 64px;
+    height: 64px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    background: #fff;
+}
+
+
+.story-camera-error {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 20;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    padding: 20px;
+
+    background: #111;
+
+    color: #fff;
+
+    text-align: center;
+}
+
+
+.story-camera-error strong {
+    font-size: 16px;
+}
+
+
+.story-camera-error button {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    background: #0095f6;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.story-camera-input {
+    display: none;
+}
+
+
+@media (max-width: 470px) {
+
+    .story-camera-page {
+        width: 100%;
+
+        height: 100dvh;
+    }
+
+
+    .story-camera-bottom {
+        bottom: 20px;
+
+        padding: 0 20px;
+    }
+
+}

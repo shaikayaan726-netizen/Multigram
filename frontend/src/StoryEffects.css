@@ -1,0 +1,101 @@
+.story-effects-panel {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    max-height: 55%;
+
+    background: #202328;
+
+    border-radius: 25px 25px 0 0;
+
+    padding: 18px;
+
+    z-index: 100;
+
+    overflow-y: auto;
+}
+
+
+.story-effects-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+
+.story-effects-header button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #5865f2;
+
+    font-weight: bold;
+}
+
+
+.story-effect-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+.story-effect-grid button {
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.story-effect-preview {
+
+    height: 75px;
+
+    border-radius: 10px;
+
+    background: #555;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+
+.story-effect-grid button.active
+.story-effect-preview {
+
+    outline: 2px solid white;
+}
+
+
+.story-effect-grid span {
+
+    font-size: 11px;
+}

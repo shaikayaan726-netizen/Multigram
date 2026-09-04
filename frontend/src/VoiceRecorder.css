@@ -1,0 +1,271 @@
+/* ===========================
+Reset
+=========================== */
+
+.voice-recorder-page {
+    width: 100%;
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+
+    padding: 20px 15px;
+}
+
+
+/* ===========================
+Back Button
+=========================== */
+
+.voice-recorder-page > button:first-child {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #000000;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+}
+
+
+/* ===========================
+Title
+=========================== */
+
+.voice-recorder-page h1 {
+    margin-top: 55px;
+
+    margin-bottom: 35px;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: #262626;
+
+    text-align: center;
+}
+
+
+/* ===========================
+Error
+=========================== */
+
+.voice-recorder-page > p {
+    width: 100%;
+
+    max-width: 350px;
+
+    margin-bottom: 20px;
+
+    padding: 12px 15px;
+
+    background: #fff0f0;
+
+    color: #d93025;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* ===========================
+Record Button
+=========================== */
+
+.voice-recorder-page > button:not(:first-child) {
+    width: 130px;
+
+    height: 130px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #3797f0;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(55, 151, 240, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.voice-recorder-page > button:not(:first-child):active {
+    transform: scale(0.94);
+}
+
+
+/* ===========================
+Recording State
+=========================== */
+
+.voice-recorder-page > button.recording {
+    background: #ed4956;
+
+    animation: recordingPulse 1.2s infinite;
+}
+
+
+@keyframes recordingPulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(237, 73, 86, 0.35);
+    }
+
+    70% {
+        box-shadow: 0 0 0 18px rgba(237, 73, 86, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(237, 73, 86, 0);
+    }
+
+}
+
+
+/* ===========================
+Audio Result
+=========================== */
+
+.voice-recorder-page > div {
+    width: 100%;
+
+    max-width: 390px;
+
+    margin-top: 35px;
+
+    padding: 18px;
+
+    background: #f7f7f7;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* ===========================
+Audio Player
+=========================== */
+
+.voice-recorder-page audio {
+    width: 100%;
+
+    height: 42px;
+}
+
+
+/* ===========================
+Done Button
+=========================== */
+
+.voice-recorder-page audio + button {
+    width: 100%;
+
+    height: 44px;
+
+    border: none;
+
+    border-radius: 22px;
+
+    background: #3797f0;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* ===========================
+Mobile
+=========================== */
+
+@media (max-width: 470px) {
+
+    .voice-recorder-page {
+        min-height: 100dvh;
+
+        padding: 15px 12px;
+    }
+
+
+    .voice-recorder-page h1 {
+        margin-top: 55px;
+
+        margin-bottom: 45px;
+
+        font-size: 23px;
+    }
+
+
+    .voice-recorder-page > button:not(:first-child) {
+        width: 125px;
+
+        height: 125px;
+    }
+
+}
+
+
+/* ===========================
+Desktop
+=========================== */
+
+@media (min-width: 471px) {
+
+    .voice-recorder-page {
+        min-height: 100vh;
+    }
+
+}

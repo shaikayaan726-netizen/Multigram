@@ -1,0 +1,1154 @@
+/*
+   DEFAULT
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ===========================
+   PROFILE PAGE
+=========================== */
+
+.Profile-page {
+    width: 100%;
+
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    background: #fafafa;
+
+    padding-bottom: 70px;
+
+    overflow-x: hidden;
+}
+
+
+/* ===========================
+   PROFILE NAVBAR
+=========================== */
+
+.profile-nav {
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: white;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+}
+
+
+/* ===========================
+   NAVBAR LEFT
+=========================== */
+
+.profile-nav-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+.profile-nav-left p {
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #262626;
+}
+
+
+/* ===========================
+   BACK BUTTON
+=========================== */
+
+.profile-back-btn {
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    color: #000;
+}
+
+
+/* ===========================
+   NAVBAR RIGHT
+=========================== */
+
+.profile-nav-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.profile-nav-icon {
+    width: 28px;
+
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    color: #000;
+}
+
+
+/* ===========================
+   PROFILE FRIENDS
+=========================== */
+
+.profile-friends {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 15px;
+
+    background: white;
+}
+
+
+/* ===========================
+   PROFILE IMAGE
+=========================== */
+
+.profile-friends-image {
+    width: 90px;
+
+    height: 90px;
+
+    flex-shrink: 0;
+}
+
+
+.profile-friends-image img {
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid #e1306c;
+
+    padding: 2px;
+
+    display: block;
+}
+
+
+/* ===========================
+   PROFILE STATS
+=========================== */
+
+.profile-stats {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    text-align: center;
+
+    margin-left: 10px;
+}
+
+
+/* ===========================
+   SINGLE STAT
+=========================== */
+
+.stat-item {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    cursor: pointer;
+}
+
+
+/* ===========================
+   STAT NUMBER
+=========================== */
+
+.stat-number {
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #262626;
+}
+
+
+/* ===========================
+   STAT LABEL
+=========================== */
+
+.stat-label {
+    font-size: 13px;
+
+    color: #262626;
+}
+
+
+/* ===========================
+   PROFILE BIO
+=========================== */
+
+.profile-bio {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 5px 15px 15px;
+
+    background: white;
+}
+
+
+/* ===========================
+   FULL NAME
+=========================== */
+
+.profile-bio h1 {
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: #262626;
+
+    margin-bottom: 8px;
+}
+
+
+/* ===========================
+   BIO
+=========================== */
+
+.profile-bio p {
+    font-size: 14px;
+
+    color: #262626;
+
+    margin-bottom: 5px;
+
+    line-height: 1.4;
+}
+
+
+/* ===========================
+   FOLLOW BUTTON
+=========================== */
+
+.profile-follow-btn {
+    width: 100%;
+
+    height: 36px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #0095f6;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* ===========================
+   FOLLOWING BUTTON
+=========================== */
+
+.profile-follow-btn.following {
+    background: #efefef;
+
+    color: #262626;
+}
+
+
+/* ===========================
+   PROFILE TABS
+=========================== */
+
+.profile-tabs {
+    width: 100%;
+
+    height: 55px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    background: white;
+
+    border-top: 1px solid #dbdbdb;
+
+    border-bottom: 1px solid #dbdbdb;
+}
+
+
+/* ===========================
+   SINGLE TAB
+=========================== */
+
+.tab {
+    width: 50%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    color: #262626;
+}
+
+
+/* ===========================
+   TAB TEXT
+=========================== */
+
+.tab p {
+    font-size: 12px;
+
+    color: #262626;
+}
+
+
+/* ===========================
+   PROFILE GRID
+=========================== */
+
+.profile-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2px;
+
+    background: white;
+}
+
+
+/* ===========================
+   GRID IMAGES
+=========================== */
+
+.profile-grid img {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+
+/* ===========================
+   LOADING
+=========================== */
+
+.profile-loading {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 15px;
+
+    color: #8e8e8e;
+
+    background: white;
+}
+
+
+/* ===========================
+   BOTTOM NAVIGATION
+=========================== */
+
+.profile-bottom-nav {
+    position: fixed;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    max-width: 470px;
+
+    height: 55px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    background: white;
+
+    border-top: 1px solid #dbdbdb;
+
+    z-index: 100;
+}
+
+
+.profile-bottom-nav .icon-btn {
+    width: 20%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    color: #000;
+}
+
+
+/* ===========================
+   PHONE
+=========================== */
+
+@media (max-width: 470px) {
+
+    .Profile-page {
+        width: 100%;
+
+        max-width: 400px;
+
+        margin: auto;
+    }
+
+
+    .profile-friends {
+        padding: 15px 12px;
+    }
+
+
+    .profile-friends-image {
+        width: 80px;
+
+        height: 80px;
+    }
+
+
+    .profile-friends-image img {
+        width: 80px;
+
+        height: 80px;
+    }
+
+
+    .profile-stats {
+        margin-left: 5px;
+    }
+
+
+    .stat-number {
+        font-size: 15px;
+    }
+
+
+    .stat-label {
+        font-size: 12px;
+    }
+
+
+    .profile-bio {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .profile-follow-btn {
+        height: 35px;
+    }
+
+}
+
+
+/* ===========================
+   LAPTOP / DESKTOP
+=========================== */
+
+@media (min-width: 471px) {
+
+    .Profile-page {
+        width: 470px;
+
+        max-width: 470px;
+
+        margin: auto;
+    }
+
+}
+/* ===========================
+   PROFILE ACTION BUTTONS
+=========================== */
+
+.profile-action-buttons {
+    width: 100%;
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+
+.profile-action-buttons button {
+    flex: 1;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* ===========================
+   EDIT PROFILE
+=========================== */
+
+.profile-edit-btn {
+    background: #efefef;
+
+    color: #262626;
+}
+
+
+/* ===========================
+   SHARE PROFILE
+=========================== */
+
+.profile-share-btn {
+    background: #efefef;
+
+    color: #262626;
+}
+
+
+/* ===========================
+   SHARE PROFILE OVERLAY
+=========================== */
+
+.profile-share-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    z-index: 1000;
+}
+
+
+/* ===========================
+   SHARE BOX
+=========================== */
+
+.profile-share-box {
+    width: 100%;
+
+    max-width: 470px;
+
+    background: white;
+
+    border-radius: 18px 18px 0 0;
+
+    padding: 20px;
+
+    animation: profileShareUp 0.2s ease;
+}
+
+
+@keyframes profileShareUp {
+
+    from {
+
+        transform: translateY(100%);
+
+    }
+
+    to {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ===========================
+   SHARE HEADER
+=========================== */
+
+.profile-share-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+
+.profile-share-header h2 {
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #262626;
+}
+
+
+.profile-share-header button {
+    width: 32px;
+
+    height: 32px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    line-height: 28px;
+
+    cursor: pointer;
+
+    color: #262626;
+}
+
+
+/* ===========================
+   PROFILE LINK
+=========================== */
+
+.profile-share-link {
+    width: 100%;
+
+    padding: 12px;
+
+    background: #f5f5f5;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    color: #555;
+
+    word-break: break-all;
+
+    margin-bottom: 15px;
+}
+
+
+/* ===========================
+   SHARE ACTIONS
+=========================== */
+
+.profile-share-actions {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.profile-share-actions button {
+    flex: 1;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px solid #dbdbdb;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #262626;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.profile-share-actions button:hover {
+    background: #f5f5f5;
+}
+
+
+.profile-share-actions svg {
+    font-size: 20px;
+}
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 470px) {
+
+    .profile-share-box {
+        max-width: 400px;
+    }
+
+}
+/* =========================================
+   OTHER USER PROFILE BUTTONS
+========================================= */
+
+.profile-other-buttons {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin-top: 12px;
+}
+
+
+.profile-other-buttons .profile-follow-btn,
+.profile-other-buttons .profile-message-btn {
+    flex: 1;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.profile-other-buttons .profile-follow-btn {
+    background: #0095f6;
+    color: #fff;
+}
+
+
+.profile-other-buttons .profile-follow-btn.following {
+    background: #efefef;
+    color: #111;
+}
+
+
+.profile-other-buttons .profile-message-btn {
+    background: #efefef;
+    color: #111;
+}
+/* =========================================
+   OTHER USER PROFILE BUTTONS
+========================================= */
+
+.profile-other-buttons {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 12px;
+
+}
+
+
+/* =========================================
+   FOLLOW + MESSAGE BUTTON
+========================================= */
+
+.profile-other-buttons .profile-follow-btn,
+.profile-other-buttons .profile-message-btn {
+
+    flex: 1 1 0;
+
+    width: 0;
+
+    min-width: 0;
+
+    height: 40px;
+
+    margin: 0;
+
+    padding: 0 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================
+   FOLLOW
+========================================= */
+
+.profile-other-buttons .profile-follow-btn {
+
+    background: #0095f6;
+
+    color: white;
+
+}
+
+
+/* =========================================
+   REQUESTED / FOLLOWING
+========================================= */
+
+.profile-other-buttons
+.profile-follow-btn.following {
+
+    background: #efefef;
+
+    color: #262626;
+
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.profile-other-buttons .profile-message-btn {
+
+    background: #efefef;
+
+    color: #262626;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 470px) {
+
+    .profile-other-buttons {
+
+        gap: 8px;
+
+    }
+
+
+    .profile-other-buttons .profile-follow-btn,
+    .profile-other-buttons .profile-message-btn {
+
+        height: 38px;
+
+    }
+
+}
+/* =========================================
+   MUTUAL FOLLOWERS
+========================================= */
+
+.profile-mutual-followers {
+
+    width: 100%;
+
+    margin-top: 5px;
+
+    margin-bottom: 2px;
+
+    font-size: 13px !important;
+
+    line-height: 18px;
+
+    color: #737373 !important;
+
+}
+
+
+.profile-mutual-username {
+
+    color: #262626;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.profile-mutual-username:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================
+   PROFILE GRID VIDEO / REEL
+========================================= */
+
+.profile-grid video {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: block;
+    object-fit: cover;
+    cursor: pointer;
+    background: #000;
+}
+
+
+/* =========================================
+   REEL PLAY ICON
+========================================= */
+
+.profile-grid-item {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+
+.profile-reel-play {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-size: 17px;
+
+    pointer-events: none;
+
+    filter: drop-shadow(
+        0 1px 3px rgba(0, 0, 0, 0.7)
+    );
+}
+
+
+/* =========================================
+   GRID LOADING / EMPTY STATE
+========================================= */
+
+.profile-posts-loading,
+.profile-no-posts {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    min-height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+
+    font-size: 14px;
+    color: #8e8e8e;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   ACTIVE PROFILE TAB
+========================================= */
+
+.profile-tabs .tab {
+    position: relative;
+}
+
+
+.profile-tabs .tab.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 2px;
+
+    background: #262626;
+}
+
+
+/* =========================================
+   GRID HOVER
+========================================= */
+
+.profile-grid-item img,
+.profile-grid-item video {
+    transition: opacity 0.15s ease;
+}
+
+
+.profile-grid-item:hover img,
+.profile-grid-item:hover video {
+    opacity: 0.92;
+}
+
+
+/* =========================================
+   MOBILE GRID
+========================================= */
+
+@media (max-width: 470px) {
+
+    .profile-grid {
+        gap: 2px;
+    }
+
+    .profile-grid video {
+        aspect-ratio: 1 / 1;
+    }
+
+    .profile-reel-play {
+        top: 8px;
+        right: 8px;
+
+        width: 26px;
+        height: 26px;
+
+        font-size: 15px;
+    }
+
+}

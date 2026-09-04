@@ -1,0 +1,490 @@
+/* ==========================================
+   RESET
+========================================== */
+
+.notification-settings-page {
+
+    width: 100%;
+
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    color: #262626;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.notification-settings-nav {
+
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 0 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 20;
+
+}
+
+
+.notification-settings-nav h1 {
+
+    margin: 0;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: #111111;
+
+}
+
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.notification-back-btn {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #111111;
+
+    font-size: 27px;
+
+    cursor: pointer;
+
+}
+
+
+/* ==========================================
+   PUSH NOTIFICATION SECTION
+========================================== */
+
+.notification-section {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    padding-top: 38px;
+
+}
+
+
+.notification-section h2 {
+
+    padding: 0 29px;
+
+    margin: 0 0 30px 0;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    color: #111111;
+
+}
+
+
+/* ==========================================
+   SWITCH ROW
+========================================== */
+
+.notification-switch-row {
+
+    width: 100%;
+
+    min-height: 105px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px 29px;
+
+    background: #ffffff;
+
+}
+
+
+.notification-row-content {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.notification-title {
+
+    display: block;
+
+    font-size: 20px;
+
+    line-height: 1.25;
+
+    color: #262626;
+
+}
+
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.notification-description {
+
+    display: block;
+
+    max-width: 650px;
+
+    font-size: 16px;
+
+    line-height: 1.35;
+
+    color: #737373;
+
+}
+
+
+/* ==========================================
+   SWITCH
+========================================== */
+
+.notification-switch {
+
+    width: 62px;
+
+    height: 36px;
+
+    flex-shrink: 0;
+
+    padding: 3px;
+
+    border: 2px solid #8e8e8e;
+
+    border-radius: 20px;
+
+    background: #e5e7eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.notification-switch span {
+
+    width: 27px;
+
+    height: 27px;
+
+    border-radius: 50%;
+
+    background: #8e8e8e;
+
+    display: block;
+
+    transition: 0.2s ease;
+
+}
+
+
+.notification-switch.active {
+
+    background: #0095f6;
+
+    border-color: #0095f6;
+
+    justify-content: flex-end;
+
+}
+
+
+.notification-switch.active span {
+
+    background: #ffffff;
+
+}
+
+
+/* ==========================================
+   SIMPLE ROW
+========================================== */
+
+.notification-simple-row {
+
+    width: 100%;
+
+    min-height: 125px;
+
+    padding: 20px 29px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+}
+
+
+.notification-simple-row:hover {
+
+    background: #fafafa;
+
+}
+
+
+.notification-simple-row > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+/* ==========================================
+   CATEGORY LIST
+========================================== */
+
+.notification-category-list {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    background: #ffffff;
+
+}
+
+
+/* ==========================================
+   CATEGORY BUTTON
+========================================== */
+
+.notification-category {
+
+    width: 100%;
+
+    min-height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 29px;
+
+    border: none;
+
+    border-bottom: 1px solid #eeeeee;
+
+    background: #ffffff;
+
+    color: #262626;
+
+    font-size: 19px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+.notification-category:hover {
+
+    background: #fafafa;
+
+}
+
+
+.notification-category svg {
+
+    flex-shrink: 0;
+
+    font-size: 25px;
+
+    color: #737373;
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 470px) {
+
+    .notification-settings-page {
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+
+    .notification-settings-nav {
+
+        height: 58px;
+
+        padding: 0 12px;
+
+        gap: 15px;
+
+    }
+
+
+    .notification-settings-nav h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    .notification-section {
+
+        padding-top: 32px;
+
+    }
+
+
+    .notification-section h2 {
+
+        padding: 0 29px;
+
+        margin-bottom: 27px;
+
+        font-size: 25px;
+
+    }
+
+
+    .notification-switch-row {
+
+        padding: 14px 29px;
+
+        min-height: 110px;
+
+    }
+
+
+    .notification-title {
+
+        font-size: 20px;
+
+    }
+
+
+    .notification-description {
+
+        font-size: 16px;
+
+    }
+
+
+    .notification-simple-row {
+
+        min-height: 135px;
+
+        padding: 20px 29px;
+
+    }
+
+
+    .notification-category {
+
+        min-height: 70px;
+
+        padding: 0 29px;
+
+        font-size: 18px;
+
+    }
+
+}
+
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media (min-width: 471px) {
+
+    .notification-settings-page {
+
+        width: 470px;
+
+        max-width: 470px;
+
+    }
+
+}

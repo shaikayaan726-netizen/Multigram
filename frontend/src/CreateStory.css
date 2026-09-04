@@ -1,0 +1,269 @@
+/* ==========================================
+   CREATE STORY
+========================================== */
+
+.create-story-page {
+
+    width: 100%;
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    background: #000;
+
+    color: white;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.create-story-source {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    position: relative;
+
+    background: #000;
+}
+
+
+@media (max-width: 470px) {
+
+    .create-story-page {
+
+        width: 100%;
+
+        max-width: none;
+    }
+
+}
+/* ===========================
+CREATE STORY
+=========================== */
+
+.create-story-page {
+    width: 100%;
+
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    background: #000000;
+
+    color: #ffffff;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* ===========================
+SOURCE SCREEN
+=========================== */
+
+.create-story-source {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px 18px;
+
+    gap: 20px;
+}
+
+
+/* ===========================
+GENERAL STORY ELEMENTS
+=========================== */
+
+.create-story-page button {
+    border: none;
+
+    cursor: pointer;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ===========================
+HEADINGS
+=========================== */
+
+.create-story-page h1 {
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    margin: 0 0 20px;
+}
+
+
+/* ===========================
+TEXT
+=========================== */
+
+.create-story-page p {
+    color: #ffffff;
+
+    font-size: 14px;
+}
+
+
+/* ===========================
+FILE INPUT
+=========================== */
+
+.create-story-page input[type="file"] {
+    width: 100%;
+
+    max-width: 330px;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    background: #1c1c1c;
+
+    color: #ffffff;
+
+    border: 1px solid #444444;
+
+    font-size: 13px;
+}
+
+
+/* ===========================
+BUTTONS
+=========================== */
+
+.create-story-page button {
+    min-height: 42px;
+
+    padding: 0 18px;
+
+    border-radius: 21px;
+
+    background: #ffffff;
+
+    color: #000000;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.create-story-page button:active {
+    transform: scale(0.96);
+}
+
+
+/* ===========================
+IMAGES
+=========================== */
+
+.create-story-page img {
+    max-width: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ===========================
+VIDEO
+=========================== */
+
+.create-story-page video {
+    width: 100%;
+
+    max-width: 430px;
+
+    max-height: 70vh;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    background: #111111;
+}
+
+
+/* ===========================
+CAMERA
+=========================== */
+
+.create-story-page video + button,
+.create-story-page .camera-button {
+    margin-top: 10px;
+}
+
+
+/* ===========================
+SOURCE CARDS
+=========================== */
+
+.create-story-source > * {
+    width: 100%;
+
+    max-width: 430px;
+}
+
+
+/* ===========================
+MOBILE
+=========================== */
+
+@media (max-width: 470px) {
+
+    .create-story-page {
+        width: 100%;
+
+        max-width: none;
+
+        min-height: 100dvh;
+    }
+
+
+    .create-story-source {
+        min-height: 100dvh;
+
+        padding: 20px 15px;
+    }
+
+}
+
+
+/* ===========================
+DESKTOP
+=========================== */
+
+@media (min-width: 471px) {
+
+    .create-story-page {
+        width: 470px;
+
+        max-width: 470px;
+
+        margin: 0 auto;
+    }
+
+}

@@ -1,0 +1,807 @@
+/* ===========================
+Reset
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ===========================
+Body
+=========================== */
+
+body {
+    background: #fafafa;
+}
+
+
+/* ===========================
+Tag People Page
+=========================== */
+
+.tag-people-page {
+    width: 100%;
+
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    overflow-x: hidden;
+}
+
+
+/* ===========================
+Navbar
+=========================== */
+
+.tag-people-nav {
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+}
+
+
+/* ===========================
+Navbar Icon Button
+=========================== */
+
+.tag-people-nav .icon-btn {
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #262626;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+
+/* ===========================
+Navbar Icon Hover
+=========================== */
+
+.tag-people-nav .icon-btn:hover {
+    background: #f5f5f5;
+
+    border-radius: 50%;
+}
+
+
+/* ===========================
+Disabled Done Button
+=========================== */
+
+.tag-people-nav .icon-btn:disabled {
+    color: #c7c7c7;
+
+    cursor: default;
+
+    background: transparent;
+}
+
+
+/* ===========================
+Navbar Title
+=========================== */
+
+.tag-people-nav h1 {
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #262626;
+}
+
+
+/* ===========================
+Search
+=========================== */
+
+.tag-search {
+    width: calc(100% - 30px);
+
+    height: 42px;
+
+    margin: 15px;
+
+    padding: 0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #efefef;
+
+    border-radius: 10px;
+}
+
+
+/* ===========================
+Search Icon
+=========================== */
+
+.tag-search > svg {
+    width: 19px;
+
+    height: 19px;
+
+    color: #8e8e8e;
+
+    flex-shrink: 0;
+}
+
+
+/* ===========================
+Search Input
+=========================== */
+
+.tag-search input {
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #262626;
+
+    font-size: 15px;
+}
+
+
+/* ===========================
+Search Placeholder
+=========================== */
+
+.tag-search input::placeholder {
+    color: #8e8e8e;
+}
+
+
+/* ===========================
+Selected User
+=========================== */
+
+.selected-tag-user {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    background: #f8f8f8;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* ===========================
+Selected User Image
+=========================== */
+
+.selected-tag-user img {
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+
+/* ===========================
+Selected User Information
+=========================== */
+
+.selected-tag-user div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-width: 0;
+}
+
+
+/* ===========================
+Selected Username
+=========================== */
+
+.selected-tag-user strong {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #262626;
+}
+
+
+/* ===========================
+Selected Text
+=========================== */
+
+.selected-tag-user p {
+    font-size: 13px;
+
+    color: #8e8e8e;
+}
+
+
+/* ===========================
+User List
+=========================== */
+
+.tag-user-list {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+}
+
+
+/* ===========================
+User Row
+=========================== */
+
+.tag-user {
+    width: 100%;
+
+    min-height: 68px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 10px 15px;
+
+    gap: 12px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    cursor: pointer;
+}
+
+
+/* ===========================
+User Row Hover
+=========================== */
+
+.tag-user:hover {
+    background: #fafafa;
+}
+
+
+/* ===========================
+Selected User Row
+=========================== */
+
+.selected-tag-user-row {
+    background: #f5f5f5;
+}
+
+
+/* ===========================
+Selected User Row Hover
+=========================== */
+
+.selected-tag-user-row:hover {
+    background: #f5f5f5;
+}
+
+
+/* ===========================
+User Image
+=========================== */
+
+.tag-user img {
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+
+/* ===========================
+User Information
+=========================== */
+
+.tag-user-info {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+/* ===========================
+Username
+=========================== */
+
+.tag-user-info strong {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #262626;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ===========================
+Full Name
+=========================== */
+
+.tag-user-info p {
+    font-size: 13px;
+
+    color: #8e8e8e;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ===========================
+Selected Check Icon
+=========================== */
+
+.tag-user > svg {
+    width: 22px;
+
+    height: 22px;
+
+    color: #0095f6;
+
+    flex-shrink: 0;
+}
+
+
+/* ===========================
+No User
+=========================== */
+
+.no-tag-user {
+    width: 100%;
+
+    padding: 30px 15px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    color: #8e8e8e;
+}
+
+
+/* ===========================
+Mobile
+=========================== */
+
+@media (max-width: 470px) {
+
+    .tag-people-page {
+        width: 100%;
+
+        max-width: 470px;
+
+        margin: 0;
+    }
+
+
+    .tag-people-nav {
+        padding: 0 12px;
+    }
+
+
+    .tag-search {
+        width: calc(100% - 24px);
+
+        margin: 12px;
+
+        height: 42px;
+    }
+
+
+    .selected-tag-user {
+        padding: 12px;
+    }
+
+
+    .tag-user {
+        padding: 10px 12px;
+    }
+
+
+    .tag-user img {
+        width: 48px;
+
+        height: 48px;
+    }
+
+}
+
+
+/* ===========================
+Desktop / Laptop
+=========================== */
+
+@media (min-width: 471px) {
+
+    .tag-people-page {
+        width: 470px;
+
+        max-width: 470px;
+
+        margin: 0 auto;
+    }
+
+}
+/* ==========================================
+   TAG PEOPLE DEFAULT AVATAR
+========================================== */
+
+.tag-user > .tag-default-avatar,
+.selected-tag-user > .tag-default-avatar {
+
+    width: 44px;
+    height: 44px;
+
+    min-width: 44px;
+
+    border-radius: 50%;
+
+    background: #e5e5e5;
+
+    color: #777;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.tag-user > .tag-default-avatar svg,
+.selected-tag-user > .tag-default-avatar svg {
+
+    width: 22px;
+
+    height: 22px;
+
+}
+
+
+/* ==========================================
+   REAL PROFILE IMAGE
+========================================== */
+
+.tag-user > img,
+.selected-tag-user > img {
+
+    width: 44px;
+
+    height: 44px;
+
+    min-width: 44px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+}
+
+
+/* ==========================================
+   BROKEN IMAGE FALLBACK
+========================================== */
+
+.avatar-fallback {
+
+    width: 44px;
+
+    height: 44px;
+
+    min-width: 44px;
+
+    border-radius: 50%;
+
+    background: #e5e5e5;
+
+    color: #777;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+/* ==========================================
+   TAG PEOPLE - FINAL POLISH
+========================================== */
+
+.tag-people-page {
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   SEARCH FOCUS
+========================================== */
+
+.tag-search:focus-within {
+    background: #e5e5e5;
+}
+
+
+/* ==========================================
+   SEARCH INPUT
+========================================== */
+
+.tag-search input {
+    min-width: 0;
+}
+
+
+/* ==========================================
+   USER ROW ACTIVE
+========================================== */
+
+.tag-user:active {
+    background: #eeeeee;
+}
+
+
+/* ==========================================
+   SELECTED USER ROW
+========================================== */
+
+.tag-user.selected-tag-user-row {
+    background: #f7f7f7;
+}
+
+
+/* ==========================================
+   CHECK ICON
+========================================== */
+
+.tag-user > svg {
+    flex-shrink: 0;
+}
+
+
+/* ==========================================
+   DEFAULT AVATAR
+========================================== */
+
+.tag-default-avatar {
+    width: 44px;
+    height: 44px;
+
+    min-width: 44px;
+    min-height: 44px;
+
+    border-radius: 50%;
+
+    background: #e5e5e5;
+
+    color: #777;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   DEFAULT AVATAR ICON
+========================================== */
+
+.tag-default-avatar svg {
+    width: 22px;
+    height: 22px;
+}
+
+
+/* ==========================================
+   PROFILE IMAGE
+========================================== */
+
+.tag-user > img,
+.selected-tag-user > img {
+    width: 44px;
+    height: 44px;
+
+    min-width: 44px;
+    min-height: 44px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ==========================================
+   LOADING / EMPTY MESSAGE
+========================================== */
+
+.no-tag-user {
+    min-height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    color: #8e8e8e;
+}
+
+
+/* ==========================================
+   SELECTED USER BLOCK
+========================================== */
+
+.selected-tag-user {
+    min-height: 68px;
+}
+
+
+/* ==========================================
+   USER INFO
+========================================== */
+
+.tag-user-info {
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 470px) {
+
+    .tag-user > img,
+    .tag-default-avatar,
+    .selected-tag-user > img {
+        width: 44px;
+        height: 44px;
+
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+}
+/* ==========================================
+   FIX: SELECTED USER AVATAR OVAL
+========================================== */
+
+.selected-tag-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.selected-tag-user > .tag-default-avatar,
+.selected-tag-user > img {
+    width: 44px !important;
+    height: 44px !important;
+
+    min-width: 44px !important;
+    max-width: 44px !important;
+
+    min-height: 44px !important;
+    max-height: 44px !important;
+
+    flex: 0 0 44px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selected-tag-user > .tag-default-avatar {
+    background: #e5e5e5;
+}
+
+.selected-tag-user > .tag-default-avatar svg {
+    width: 22px;
+    height: 22px;
+}

@@ -1,0 +1,164 @@
+.security-detail-page {
+    width: 100%;
+    max-width: 470px;
+    min-height: 100vh;
+    margin: auto;
+    background: #fafafa;
+}
+
+
+.security-detail-nav {
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 0 15px;
+
+    background: white;
+
+    border-bottom: 1px solid #dbdbdb;
+}
+
+
+.security-detail-nav h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.security-detail-back-btn {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    cursor: pointer;
+}
+
+
+.security-detail-section {
+    margin-top: 10px;
+
+    background: white;
+}
+
+
+.security-detail-section h2 {
+    padding: 18px 15px;
+
+    font-size: 16px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.security-recovery-row {
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 15px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.security-recovery-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eeeeee;
+
+    font-size: 20px;
+}
+
+
+.security-recovery-info {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.security-recovery-info strong {
+    font-size: 14px;
+}
+
+
+.security-recovery-info span {
+    font-size: 13px;
+
+    color: #737373;
+}
+
+
+.security-recovery-info input {
+    width: 100%;
+
+    height: 35px;
+
+    padding: 0 8px;
+
+    border: 1px solid #dbdbdb;
+
+    border-radius: 6px;
+
+    outline: none;
+}
+
+
+.security-edit-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #0095f6;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.security-recovery-note {
+    padding: 18px 15px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #737373;
+}
+
+
+@media (max-width: 470px) {
+
+    .security-detail-page {
+        max-width: 100%;
+    }
+
+}

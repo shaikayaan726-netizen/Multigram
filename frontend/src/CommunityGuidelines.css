@@ -1,0 +1,62 @@
+.guidelines-content {
+    margin-top: 10px;
+
+    padding: 22px 15px;
+
+    background: white;
+}
+
+
+.guidelines-content h2 {
+    font-size: 20px;
+}
+
+
+.guidelines-content > p {
+    margin-top: 8px;
+
+    color: #737373;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.guidelines-list {
+    margin-top: 20px;
+}
+
+
+.guideline-row {
+    min-height: 60px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.guideline-row svg {
+    flex-shrink: 0;
+
+    margin-top: 1px;
+
+    color: #0095f6;
+
+    font-size: 19px;
+}
+
+
+.guideline-row span {
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #333;
+}

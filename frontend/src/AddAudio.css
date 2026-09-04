@@ -1,0 +1,1121 @@
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.add-audio-page {
+
+    width: 100%;
+
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    color: #262626;
+
+    position: relative;
+
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.add-audio-nav {
+
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    background: #ffffff;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 20;
+
+}
+
+
+.add-audio-nav h1 {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin: 0;
+
+}
+
+
+.audio-back-btn,
+.audio-done-btn {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+}
+
+
+.audio-back-btn svg {
+
+    width: 23px;
+
+    height: 23px;
+
+}
+
+
+.audio-done-btn {
+
+    color: #0095f6;
+
+}
+
+
+.audio-done-btn svg {
+
+    width: 23px;
+
+    height: 23px;
+
+}
+
+
+.audio-done-btn:disabled {
+
+    opacity: 0.25;
+
+    cursor: default;
+
+}
+
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+.audio-search {
+
+    width: 100%;
+
+    padding: 12px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    background: #ffffff;
+
+}
+
+
+.audio-search svg {
+
+    flex-shrink: 0;
+
+    width: 20px;
+
+    height: 20px;
+
+    color: #8e8e8e;
+
+}
+
+
+.audio-search input {
+
+    width: 100%;
+
+    height: 40px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 10px;
+
+    background: #f1f1f1;
+
+    padding: 0 14px;
+
+    font-size: 15px;
+
+}
+
+
+.audio-search input::placeholder {
+
+    color: #8e8e8e;
+
+}
+
+
+/* ==========================================
+   EMPTY / MESSAGE
+========================================== */
+
+.audio-empty {
+
+    min-height: 430px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+.audio-empty svg {
+
+    width: 42px;
+
+    height: 42px;
+
+    margin-bottom: 20px;
+
+    color: #262626;
+
+}
+
+
+.audio-empty h2 {
+
+    font-size: 16px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.audio-empty p {
+
+    font-size: 13px;
+
+    color: #8e8e8e;
+
+}
+
+
+.audio-message {
+
+    text-align: center;
+
+    padding: 30px 15px;
+
+    color: #8e8e8e;
+
+    font-size: 14px;
+
+}
+
+
+.audio-error {
+
+    text-align: center;
+
+    padding: 18px 15px;
+
+    color: #ed4956;
+
+    font-size: 14px;
+
+}
+
+
+/* ==========================================
+   SONG LIST
+========================================== */
+
+.audio-list {
+
+    width: 100%;
+
+    padding-bottom: 25px;
+
+}
+
+
+.audio-item {
+
+    width: 100%;
+
+    min-height: 76px;
+
+    padding: 10px 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    background: #ffffff;
+
+}
+
+
+.audio-item:hover {
+
+    background: #fafafa;
+
+}
+
+
+.selected-audio {
+
+    background: #f7f7f7;
+
+}
+
+
+/* ==========================================
+   SONG IMAGE
+========================================== */
+
+.audio-image {
+
+    width: 50px;
+
+    height: 50px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    background: #eeeeee;
+
+}
+
+
+/* ==========================================
+   SONG INFO
+========================================== */
+
+.audio-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.audio-info h3 {
+
+    margin: 0 0 3px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.audio-info p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #8e8e8e;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.audio-info span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    color: #8e8e8e;
+
+}
+
+
+/* ==========================================
+   LIST PLAY BUTTON
+========================================== */
+
+.audio-play-list-btn {
+
+    width: 35px;
+
+    height: 35px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+
+.audio-play-list-btn svg {
+
+    width: 20px;
+
+    height: 20px;
+
+}
+
+
+/* ==========================================
+   BOOKMARK
+========================================== */
+
+.audio-bookmark-btn {
+
+    width: 35px;
+
+    height: 35px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+
+.audio-bookmark-btn svg {
+
+    width: 21px;
+
+    height: 21px;
+
+}
+
+
+.audio-bookmark-btn.saved {
+
+    color: #0095f6;
+
+}
+
+
+/* ==========================================
+   SELECT BUTTON
+========================================== */
+
+.audio-select-btn {
+
+    min-width: 70px;
+
+    height: 34px;
+
+    padding: 0 10px;
+
+    border: 1px solid #0095f6;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #0095f6;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.audio-select-btn.selected {
+
+    background: #0095f6;
+
+    color: #ffffff;
+
+}
+
+
+/* ==========================================
+   SELECTION PANEL
+========================================== */
+
+.audio-selection-panel {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    border-top: 1px solid #dddddd;
+
+    padding: 0 14px 22px;
+
+    position: sticky;
+
+    bottom: 0;
+
+    z-index: 30;
+
+    box-shadow:
+        0 -4px 20px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* ==========================================
+   PANEL HEADER
+========================================== */
+
+.selection-header {
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.selection-header strong {
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+}
+
+
+.selection-header button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #4f63e8;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+/* ==========================================
+   SELECTED IMAGE
+========================================== */
+
+.selected-song-image {
+
+    width: 72px;
+
+    height: 72px;
+
+    display: block;
+
+    margin: 4px auto 12px;
+
+    border-radius: 8px;
+
+    object-fit: cover;
+
+}
+
+
+/* ==========================================
+   SELECTED TITLE
+========================================== */
+
+.selected-song-title {
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.selected-song-artist {
+
+    margin: 5px auto 14px;
+
+    max-width: 95%;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #999999;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+/* ==========================================
+   TIME
+========================================== */
+
+.selection-time-row {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 0 5px 5px;
+
+    color: #777777;
+
+    font-size: 12px;
+
+}
+
+
+/* ==========================================
+   WAVEFORM
+========================================== */
+
+.waveform {
+
+    width: 100%;
+
+    height: 74px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    gap: 2px;
+
+    padding: 0 4px;
+
+    border-radius: 7px;
+
+    background: #fafafa;
+
+    cursor: pointer;
+
+    touch-action: none;
+
+}
+
+
+.wave-bar {
+
+    width: 3px;
+
+    flex: 1;
+
+    max-width: 4px;
+
+    min-height: 7px;
+
+    border-radius: 4px;
+
+    background: #dddddd;
+
+}
+
+
+.wave-bar.strong {
+
+    background: #d2d2d2;
+
+}
+
+
+/* ==========================================
+   SELECTED WINDOW
+========================================== */
+
+.selection-window {
+
+    position: absolute;
+
+    top: 8px;
+
+    bottom: 8px;
+
+    min-width: 25px;
+
+    border: 3px solid #7c3cff;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 196, 0, 0.85),
+            rgba(255, 0, 128, 0.85)
+        );
+
+    box-shadow:
+        0 0 0 1px
+        rgba(255, 255, 255, 0.8);
+
+    z-index: 5;
+
+}
+
+
+/* ==========================================
+   SELECTED WINDOW WAVE
+========================================== */
+
+.selection-window::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.95;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.85) 0px,
+            rgba(255, 255, 255, 0.85) 3px,
+            transparent 3px,
+            transparent 8px
+        );
+
+}
+
+
+/* ==========================================
+   PLAYBACK PROGRESS
+========================================== */
+
+.selection-progress {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    bottom: 0;
+
+    background:
+        rgba(255, 255, 255, 0.22);
+
+    z-index: 2;
+
+}
+
+
+/* ==========================================
+   HANDLES
+========================================== */
+
+.selection-handle {
+
+    position: absolute;
+
+    top: -4px;
+
+    bottom: -4px;
+
+    width: 9px;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    border: 2px solid #7c3cff;
+
+    z-index: 10;
+
+    cursor: ew-resize;
+
+    touch-action: none;
+
+}
+
+
+.selection-handle.left {
+
+    left: -6px;
+
+}
+
+
+.selection-handle.right {
+
+    right: -6px;
+
+}
+
+
+/* ==========================================
+   CONTROLS
+========================================== */
+
+.selection-controls {
+
+    width: 100%;
+
+    min-height: 60px;
+
+    margin-top: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+}
+
+
+.duration-circle {
+
+    width: 48px;
+
+    height: 48px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 14px;
+
+    color: #777777;
+
+}
+
+
+.selection-controls > span {
+
+    margin-left: 8px;
+
+    color: #999999;
+
+    font-size: 12px;
+
+}
+
+
+/* ==========================================
+   BIG PLAY
+========================================== */
+
+.big-play-btn {
+
+    position: absolute;
+
+    right: 5px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #222222;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+
+.big-play-btn svg {
+
+    width: 21px;
+
+    height: 21px;
+
+}
+
+
+/* ==========================================
+   RANGE TEXT
+========================================== */
+
+.selected-range-text {
+
+    margin: 0;
+
+    text-align: center;
+
+    color: #777777;
+
+    font-size: 12px;
+
+}
+
+
+/* ==========================================
+   PREVIEW
+========================================== */
+
+.preview-selection-btn {
+
+    width: 100%;
+
+    height: 42px;
+
+    margin-top: 12px;
+
+    border: none;
+
+    border-radius: 21px;
+
+    background: #0095f6;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.preview-selection-btn:hover {
+
+    opacity: 0.9;
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 470px) {
+
+    .add-audio-page {
+
+        width: 100%;
+
+    }
+
+
+    .audio-item {
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+
+    }
+
+
+    .audio-image {
+
+        width: 48px;
+
+        height: 48px;
+
+    }
+
+
+    .audio-info h3 {
+
+        font-size: 13px;
+
+    }
+
+
+    .audio-select-btn {
+
+        min-width: 64px;
+
+        padding: 0 8px;
+
+    }
+
+}
+
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media (min-width: 471px) {
+
+    .add-audio-page {
+
+        width: 470px;
+
+    }
+
+}
+.selection-handle {
+
+    position: absolute;
+
+    top: -6px;
+
+    bottom: -6px;
+
+    width: 12px;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    border: 2px solid #7c3cff;
+
+    z-index: 50;
+
+    cursor: ew-resize;
+
+    touch-action: none;
+
+    pointer-events: auto;
+
+}
+
+
+.selection-handle.left {
+
+    left: -7px;
+
+}
+
+
+.selection-handle.right {
+
+    right: -7px;
+
+}

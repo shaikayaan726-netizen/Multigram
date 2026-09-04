@@ -1,0 +1,282 @@
+/* ==========================================
+   PAGE
+========================================== */
+
+.about-page {
+    width: 100%;
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    background: #fafafa;
+
+    color: #262626;
+
+    overflow-x: hidden;
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.about-nav {
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 0 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 20;
+}
+
+
+.about-nav h1 {
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: #111111;
+}
+
+
+.about-back-btn {
+    width: 36px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #262626;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   APP CARD
+========================================== */
+
+.about-app-card {
+    width: 100%;
+
+    padding: 30px 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    text-align: center;
+}
+
+
+.about-logo {
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 18px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-size: 38px;
+
+    font-weight: 700;
+}
+
+
+.about-app-card h2 {
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #222222;
+}
+
+
+.about-app-card p {
+    margin-top: 7px;
+
+    font-size: 13px;
+
+    color: #777777;
+}
+
+
+/* ==========================================
+   SECTION
+========================================== */
+
+.about-section {
+    width: 100%;
+
+    margin-top: 8px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #eeeeee;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.about-section h2 {
+    padding: 17px 15px 12px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #555555;
+}
+
+
+/* ==========================================
+   ROW
+========================================== */
+
+.about-row {
+    width: 100%;
+
+    min-height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    border-top: 1px solid #eeeeee;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    color: #262626;
+}
+
+
+.about-row:hover {
+    background: #fafafa;
+}
+
+
+.about-row svg {
+    font-size: 20px;
+
+    color: #999999;
+}
+
+
+/* ==========================================
+   VERSION
+========================================== */
+
+.about-version {
+    width: 100%;
+
+    padding: 35px 15px 50px;
+
+    text-align: center;
+
+    color: #999999;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 470px) {
+
+    .about-page {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    .about-nav {
+        padding: 0 12px;
+    }
+
+
+    .about-section h2 {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .about-row {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+}
+
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media (min-width: 471px) {
+
+    .about-page {
+        width: 470px;
+    }
+
+}

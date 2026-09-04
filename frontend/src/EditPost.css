@@ -1,0 +1,299 @@
+/* ===========================
+Reset
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ===========================
+Edit Post Page
+=========================== */
+
+.edit-post-page {
+    width: 100%;
+    max-width: 470px;
+    min-height: 100vh;
+    margin: auto;
+    background: white;
+}
+
+
+/* ===========================
+Navbar
+=========================== */
+
+.edit-post-nav {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: white;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
+}
+
+
+/* ===========================
+Navbar Title
+=========================== */
+
+.edit-post-nav h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #262626;
+}
+
+
+/* ===========================
+Done Icon
+=========================== */
+
+.edit-post-nav .done-icon {
+    color: #0095f6;
+    font-size: 24px;
+}
+
+
+/* ===========================
+User Information
+=========================== */
+
+.edit-post-user {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    background: white;
+}
+
+
+/* ===========================
+User Profile Image
+=========================== */
+
+.edit-post-user img {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+/* ===========================
+Username
+=========================== */
+
+.edit-post-user p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #262626;
+}
+
+
+/* ===========================
+Post Image
+=========================== */
+
+.edit-post-image {
+    width: 100%;
+
+    background: #000000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.edit-post-image img {
+    width: 100%;
+    height: 350px;
+
+    object-fit: cover;
+}
+
+
+/* ===========================
+Caption
+=========================== */
+
+.edit-caption {
+    width: 100%;
+
+    padding: 15px;
+
+    background: white;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.edit-caption textarea {
+    width: 100%;
+
+    min-height: 70px;
+
+    border: none;
+
+    outline: none;
+
+    resize: none;
+
+    font-size: 15px;
+
+    color: #262626;
+
+    background: transparent;
+}
+
+
+.edit-caption textarea::placeholder {
+    color: #8e8e8e;
+}
+
+
+/* ===========================
+Edit Options
+=========================== */
+
+.edit-options {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: white;
+}
+
+
+/* ===========================
+Single Option
+=========================== */
+
+.edit-option {
+    width: 100%;
+
+    min-height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    cursor: pointer;
+}
+
+
+/* ===========================
+Left Side
+=========================== */
+
+.edit-option-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* ===========================
+Option Icon
+=========================== */
+
+.edit-option-left svg {
+    font-size: 21px;
+
+    color: #262626;
+}
+
+
+/* ===========================
+Option Text
+=========================== */
+
+.edit-option-left p {
+    font-size: 15px;
+
+    color: #262626;
+}
+
+
+/* ===========================
+Arrow
+=========================== */
+
+.edit-option > span {
+    font-size: 20px;
+
+    color: #8e8e8e;
+}
+
+
+/* ===========================
+Hover
+=========================== */
+
+.edit-option:hover {
+    background: #fafafa;
+}
+
+
+/* ===========================
+Mobile
+=========================== */
+
+@media (max-width: 470px) {
+
+    .edit-post-page {
+        width: 100%;
+        max-width: 470px;
+    }
+
+    .edit-post-image img {
+        height: 330px;
+    }
+
+}
+
+
+/* ===========================
+Desktop
+=========================== */
+
+@media (min-width: 471px) {
+
+    .edit-post-page {
+        width: 470px;
+        max-width: 470px;
+    }
+
+}

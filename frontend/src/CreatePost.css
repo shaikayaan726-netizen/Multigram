@@ -1,0 +1,688 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =================================
+   BODY
+================================= */
+
+body {
+    margin: 0;
+
+    background: #fafafa;
+}
+
+
+/* =================================
+   PAGE
+================================= */
+
+.create-post-page {
+
+    width: 100%;
+
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    background: #ffffff;
+
+    padding-bottom: 30px;
+
+    overflow-x: hidden;
+}
+
+
+/* =================================
+   NAVBAR
+================================= */
+
+.create-post-nav {
+
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 14px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 20;
+}
+
+
+.create-post-nav h1 {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #262626;
+}
+
+
+/* =================================
+   ICON BUTTON
+================================= */
+
+.icon-btn {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #262626;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   DONE BUTTON
+================================= */
+
+.done-btn {
+
+    border: none;
+
+    background: transparent;
+
+    color: #0095f6;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   UPLOAD POST
+================================= */
+
+.upload-post {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =================================
+   IMAGE WRAPPER
+================================= */
+
+.post-image-wrapper {
+
+    width: 95px;
+
+    height: 95px;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+}
+
+
+/* =================================
+   IMAGE
+================================= */
+
+.post-image-wrapper img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =================================
+   TEXT OVERLAY
+================================= */
+
+.post-text-overlay {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 90%;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-shadow:
+        0 1px 3px #000000;
+
+    pointer-events: none;
+
+    word-break: break-word;
+}
+
+
+/* =================================
+   EMPTY IMAGE
+================================= */
+
+.empty-post-image {
+
+    width: 95px;
+
+    height: 95px;
+
+    flex-shrink: 0;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eeeeee;
+
+    color: #8e8e8e;
+
+    font-size: 12px;
+}
+
+
+/* =================================
+   CAPTION
+================================= */
+
+.upload-post textarea {
+
+    flex: 1;
+
+    min-height: 95px;
+
+    border: none;
+
+    outline: none;
+
+    resize: none;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    color: #262626;
+
+    background: transparent;
+}
+
+
+.upload-post textarea::placeholder {
+
+    color: #8e8e8e;
+}
+
+
+/* =================================
+   AUDIO
+================================= */
+
+.selected-audio-info {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.selected-audio-info > svg {
+
+    font-size: 23px;
+
+    color: #262626;
+
+    flex-shrink: 0;
+}
+
+
+.selected-audio-info > div {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.selected-audio-info p {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #262626;
+}
+
+
+.selected-audio-info span {
+
+    font-size: 12px;
+
+    color: #737373;
+}
+
+
+.selected-audio-info small {
+
+    font-size: 11px;
+
+    color: #8e8e8e;
+}
+
+
+/* =================================
+   TAGGED USER
+================================= */
+
+.selected-tag-user {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.selected-tag-user img {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+.selected-tag-user > div {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.selected-tag-user p {
+
+    font-size: 12px;
+
+    color: #8e8e8e;
+}
+
+
+.selected-tag-user strong {
+
+    font-size: 14px;
+
+    color: #262626;
+}
+
+
+/* =================================
+   LOCATION
+================================= */
+
+.selected-location-info {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.selected-location-info > svg {
+
+    font-size: 23px;
+
+    color: #262626;
+
+    flex-shrink: 0;
+}
+
+
+.selected-location-info > div {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.selected-location-info p {
+
+    font-size: 12px;
+
+    color: #8e8e8e;
+}
+
+
+.selected-location-info strong {
+
+    font-size: 14px;
+
+    color: #262626;
+}
+
+
+.selected-location-info small {
+
+    font-size: 12px;
+
+    color: #737373;
+}
+
+
+/* =================================
+   REMOVE BUTTON
+================================= */
+
+.small-remove-btn {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #737373;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   POST CONTENT
+================================= */
+
+.post-content {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+}
+
+
+/* =================================
+   POST OPTION
+================================= */
+
+.post-media {
+
+    width: 100%;
+
+    min-height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 16px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    cursor: pointer;
+}
+
+
+.post-media:hover {
+
+    background: #fafafa;
+}
+
+
+.post-media p {
+
+    font-size: 15px;
+
+    color: #262626;
+}
+
+
+/* =================================
+   OPTION ICON
+================================= */
+
+.option-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #262626;
+
+    font-size: 22px;
+
+    pointer-events: none;
+}
+
+
+/* =================================
+   NEXT TEXT
+================================= */
+
+.post-media span {
+
+    color: #0095f6;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =================================
+   ALSO POST
+================================= */
+
+.send-post-media {
+
+    width: 100%;
+
+    background: #ffffff;
+}
+
+
+.also-post-title {
+
+    padding: 16px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #262626;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 470px) {
+
+    .create-post-page {
+
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    .create-post-nav {
+
+        height: 58px;
+    }
+
+
+    .upload-post {
+
+        padding: 12px;
+    }
+
+
+    .post-image-wrapper,
+    .empty-post-image {
+
+        width: 85px;
+
+        height: 85px;
+    }
+
+}
+
+
+/* =================================
+   DESKTOP
+================================= */
+
+@media (min-width: 471px) {
+
+    .create-post-page {
+
+        width: 470px;
+    }
+
+}

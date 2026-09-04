@@ -1,0 +1,627 @@
+/* =========================================
+   EDITOR COMPONENT PANELS
+========================================= */
+
+.media-editor-page .editor-panel,
+.media-editor-page .editor-tool-panel,
+.media-editor-page .editor-popup,
+.media-editor-page .editor-controls {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 14px;
+
+  background: #11151a;
+  color: #fff;
+
+  border-top: 1px solid #252a30;
+}
+
+/* =========================================
+   TEXT EDITOR
+========================================= */
+
+.media-editor-page input[type="text"] {
+  width: calc(100% - 90px);
+  height: 42px;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  border: 1px solid #333;
+  border-radius: 8px;
+
+  background: #1d2228;
+  color: #fff;
+
+  outline: none;
+}
+
+.media-editor-page input[type="text"]::placeholder {
+  color: #888;
+}
+
+.media-editor-page input[type="text"]:focus {
+  border-color: #777;
+}
+
+.media-editor-page input[type="text"] + button {
+  height: 42px;
+
+  margin-left: 6px;
+
+  padding: 0 14px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: #fff;
+  color: #000;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   STICKERS
+========================================= */
+
+.media-editor-page .sticker-list,
+.media-editor-page .stickers,
+.media-editor-page .sticker-panel {
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 8px;
+
+  padding: 12px;
+
+  background: #11151a;
+
+  box-sizing: border-box;
+}
+
+.media-editor-page .sticker-list button,
+.media-editor-page .stickers button,
+.media-editor-page .sticker-panel button {
+  width: 48px;
+  height: 48px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: #242a31;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-editor-page .sticker-list button:hover,
+.media-editor-page .stickers button:hover,
+.media-editor-page .sticker-panel button:hover {
+  background: #343b44;
+}
+
+/* =========================================
+   EFFECTS
+========================================= */
+
+.media-editor-page .effects-panel,
+.media-editor-page .effects-list,
+.media-editor-page .editor-effects {
+  display: flex;
+
+  gap: 10px;
+
+  overflow-x: auto;
+
+  padding: 14px;
+
+  background: #11151a;
+
+  box-sizing: border-box;
+}
+
+.media-editor-page .effects-panel button,
+.media-editor-page .effects-list button,
+.media-editor-page .editor-effects button {
+  min-width: 70px;
+  height: 48px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: #242a31;
+  color: #fff;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+}
+
+.media-editor-page .effects-panel button:hover,
+.media-editor-page .effects-list button:hover,
+.media-editor-page .editor-effects button:hover {
+  background: #3a424c;
+}
+
+/* =========================================
+   DRAW
+========================================= */
+
+.media-editor-page canvas {
+  max-width: 100%;
+
+  display: block;
+
+  background: transparent;
+}
+
+.media-editor-page .draw-panel,
+.media-editor-page .draw-controls,
+.media-editor-page .editor-draw {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 12px;
+
+  background: #11151a;
+
+  box-sizing: border-box;
+}
+
+.media-editor-page .draw-panel button,
+.media-editor-page .draw-controls button,
+.media-editor-page .editor-draw button {
+  min-width: 48px;
+  height: 42px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: #242a31;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   MUSIC
+========================================= */
+
+.media-editor-page .music-panel,
+.media-editor-page .music-list,
+.media-editor-page .editor-music {
+  width: 100%;
+
+  max-height: 220px;
+
+  overflow-y: auto;
+
+  padding: 12px;
+
+  background: #11151a;
+
+  box-sizing: border-box;
+}
+
+.media-editor-page .music-panel button,
+.media-editor-page .music-list button,
+.media-editor-page .editor-music button {
+  width: 100%;
+
+  min-height: 48px;
+
+  margin-bottom: 8px;
+
+  padding: 10px 14px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: #242a31;
+
+  color: #fff;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.media-editor-page .music-panel button:hover,
+.media-editor-page .music-list button:hover,
+.media-editor-page .editor-music button:hover {
+  background: #343b44;
+}
+
+/* =========================================
+   ALL EDITOR PANEL BUTTONS
+========================================= */
+
+.media-editor-page .editor-panel button,
+.media-editor-page .editor-tool-panel button,
+.media-editor-page .editor-popup button {
+  cursor: pointer;
+}
+/* =====================================
+   DRAW OVERLAY
+===================================== */
+
+.draw-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  width: 100%;
+  height: 100%;
+
+  touch-action: none;
+}
+
+
+/* =====================================
+   DRAW CANVAS
+===================================== */
+
+.draw-canvas {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  cursor: crosshair;
+
+  touch-action: none;
+}
+
+
+/* =====================================
+   TOP BAR
+===================================== */
+
+.draw-topbar {
+  position: absolute;
+
+  top: 15px;
+  left: 0;
+  right: 0;
+
+  z-index: 10001;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 16px;
+
+  pointer-events: none;
+}
+
+
+/* =====================================
+   DRAW BUTTONS
+===================================== */
+
+.draw-topbar button {
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+}
+
+
+.draw-clear-button {
+  background: rgba(40, 40, 40, 0.9);
+  color: white;
+}
+
+
+.draw-done-button {
+  background: white;
+  color: black;
+}
+
+
+/* =====================================
+   BOTTOM TOOLBAR
+===================================== */
+
+.draw-toolbar {
+  position: absolute;
+
+  left: 50%;
+  bottom: 20px;
+
+  transform: translateX(-50%);
+
+  z-index: 10001;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 12px 18px;
+
+  border-radius: 30px;
+
+  background: rgba(25, 25, 25, 0.95);
+}
+
+
+.draw-toolbar input[type="color"] {
+  width: 38px;
+  height: 38px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+.draw-toolbar input[type="range"] {
+  width: 120px;
+
+  cursor: pointer;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .draw-topbar {
+    top: 12px;
+    padding: 0 12px;
+  }
+
+
+  .draw-topbar button {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .draw-toolbar {
+    bottom: 15px;
+
+    padding: 10px 14px;
+
+    gap: 12px;
+  }
+
+
+  .draw-toolbar input[type="range"] {
+    width: 100px;
+  }
+
+}
+/* =========================================
+   DRAW OVERLAY — MOBILE EDITOR ONLY
+========================================= */
+
+.draw-overlay {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 100;
+
+  background: rgba(0, 0, 0, 0.82);
+
+  overflow: hidden;
+
+  touch-action: none;
+}
+
+
+/* =========================================
+   CANVAS
+========================================= */
+
+.draw-canvas {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  touch-action: none;
+
+  cursor: crosshair;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.draw-topbar {
+  position: absolute;
+
+  top: 14px;
+  left: 12px;
+  right: 12px;
+
+  z-index: 110;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.draw-topbar button {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  font-size: 20px;
+}
+
+
+.draw-clear-button {
+  background: rgba(30, 30, 30, 0.9);
+  color: white;
+}
+
+
+.draw-done-button {
+  background: white;
+  color: black;
+}
+
+
+/* =========================================
+   BOTTOM DRAW TOOLBAR
+========================================= */
+
+.draw-toolbar {
+  position: absolute;
+
+  left: 50%;
+  bottom: 18px;
+
+  transform: translateX(-50%);
+
+  z-index: 110;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 10px 16px;
+
+  border-radius: 28px;
+
+  background: rgba(20, 20, 20, 0.95);
+}
+
+
+.draw-toolbar input[type="color"] {
+  width: 36px;
+  height: 36px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+
+.draw-toolbar input[type="range"] {
+  width: 110px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   IMPORTANT:
+   KEEP DRAW INSIDE MOBILE EDITOR
+========================================= */
+
+@media (min-width: 601px) {
+
+  .draw-overlay {
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: auto;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .draw-topbar {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .draw-topbar button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .draw-toolbar {
+    bottom: 12px;
+
+    padding: 9px 13px;
+
+    gap: 10px;
+  }
+
+  .draw-toolbar input[type="range"] {
+    width: 90px;
+  }
+
+}

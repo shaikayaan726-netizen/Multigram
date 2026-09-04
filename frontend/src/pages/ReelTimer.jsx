@@ -1,0 +1,1 @@
+function ReelTimer({value=0,onChange}){return <div className="reel-timer"><h3>Timer</h3>{[0,3,10].map(x=><button className={value===x?"active":""} key={x} onClick={()=>onChange(x)}>{x?x+"s":"Off"}</button>)}</div>}export default ReelTimer;

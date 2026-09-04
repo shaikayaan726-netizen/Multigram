@@ -1,0 +1,237 @@
+/* ===========================
+Reset
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ===========================
+Notification Page
+=========================== */
+
+.notification-page {
+    width: 100%;
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    background: white;
+
+    overflow-x: hidden;
+}
+
+
+/* ===========================
+Navbar
+=========================== */
+
+.notification-nav {
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: white;
+
+    border-bottom: 1px solid lightgray;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+}
+
+
+/* ===========================
+Back Button
+=========================== */
+
+.notification-back {
+    width: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: none;
+
+    border: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    font-size: 23px;
+
+    color: #222;
+
+    cursor: pointer;
+}
+
+
+/* ===========================
+Heading
+=========================== */
+
+.notification-nav h1 {
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #222;
+}
+
+
+/* ===========================
+Filter Button
+=========================== */
+
+.notification-filter {
+    width: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    background: none;
+
+    border: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    color: #222;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.notification-filter svg {
+    font-size: 18px;
+}
+
+
+/* ===========================
+Notification Row
+=========================== */
+
+.notification-info {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 12px 15px;
+
+    background: white;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* ===========================
+Profile Image
+=========================== */
+
+.notification-info img {
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+
+/* ===========================
+Notification Text
+=========================== */
+
+.notification-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    margin-left: 12px;
+}
+
+.notification-text p {
+    font-size: 14px;
+
+    color: #555;
+
+    margin: 0;
+}
+
+.notification-text p:first-child {
+    color: #222;
+}
+
+
+/* ===========================
+Phone
+=========================== */
+
+@media (max-width: 470px) {
+
+    .notification-page {
+        width: 100%;
+
+        max-width: none;
+
+        margin: 0;
+    }
+
+    .notification-nav {
+        padding: 0 12px;
+    }
+
+    .notification-info {
+        padding: 12px;
+    }
+
+}
+
+
+/* ===========================
+Laptop
+=========================== */
+
+@media (min-width: 471px) {
+
+    .notification-page {
+        width: 470px;
+
+        max-width: 470px;
+
+        margin: 0 auto;
+    }
+
+}

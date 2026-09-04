@@ -1,0 +1,10 @@
+@import "./pages/Gallery.css";
+@import "./pages/MediaEditor.css";
+@import "./pages/Camera.css";
+@import "./pages/VoiceRecorder.css";
+@import "./pages/VoiceCall.css";
+@import "./pages/IncomingVoiceCall.css";
+@import "./pages/ActiveVoiceCall.css";
+@import "./pages/VideoCall.css";
+@import "./pages/IncomingVideoCall.css";
+@import "./pages/ActiveVideoCall.css";

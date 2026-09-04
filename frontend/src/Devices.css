@@ -1,0 +1,145 @@
+.security-detail-page {
+    width: 100%;
+    max-width: 470px;
+    min-height: 100vh;
+    margin: auto;
+    background: #fafafa;
+}
+
+
+.security-detail-nav {
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 0 15px;
+
+    background: white;
+
+    border-bottom: 1px solid #dbdbdb;
+}
+
+
+.security-detail-nav h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.security-detail-back-btn {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    cursor: pointer;
+}
+
+
+.security-detail-section {
+    margin-top: 10px;
+
+    background: white;
+}
+
+
+.security-detail-section h2 {
+    padding: 18px 15px;
+
+    font-size: 16px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.security-device-row {
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 14px 15px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.security-device-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eeeeee;
+
+    font-size: 22px;
+}
+
+
+.security-device-info {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.security-device-info strong {
+    font-size: 14px;
+}
+
+
+.security-device-info span {
+    font-size: 12px;
+
+    color: #737373;
+}
+
+
+.security-device-info small {
+    font-size: 12px;
+
+    color: #0095f6;
+}
+
+
+.security-logout-device {
+    border: none;
+
+    background: transparent;
+
+    color: #ed4956;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+@media (max-width: 470px) {
+
+    .security-detail-page {
+        max-width: 100%;
+    }
+
+}

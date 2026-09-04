@@ -1,0 +1,264 @@
+/* =========================================
+   GALLERY PAGE
+========================================= */
+
+.gallery-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.gallery-header {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  box-sizing: border-box;
+  background: #000;
+  border-bottom: 1px solid #262626;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.gallery-header h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.gallery-header button {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 8px;
+}
+
+.gallery-header button:first-child {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.gallery-header button:last-child {
+  color: #0095f6;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.gallery-tabs {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 16px;
+  background: #000;
+  border-bottom: 1px solid #262626;
+}
+
+.gallery-tabs button {
+  border: 0;
+  background: transparent;
+  color: #a8a8a8;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 14px 0;
+}
+
+.gallery-tabs button.active {
+  color: #fff;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.gallery-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: #000;
+}
+
+
+/* =========================================
+   CAMERA TILE
+========================================= */
+
+.gallery-camera-tile {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: 0;
+  padding: 0;
+  background: #181818;
+  color: #fff;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-camera-tile span {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.gallery-camera-tile small {
+  font-size: 12px;
+  color: #ddd;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.gallery-placeholder {
+  aspect-ratio: 1 / 1;
+  background:
+    linear-gradient(
+      135deg,
+      #202020,
+      #101010
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #777;
+  overflow: hidden;
+}
+
+.gallery-placeholder span {
+  font-size: 11px;
+}
+
+
+/* =========================================
+   REAL MEDIA PREVIEW
+========================================= */
+
+.gallery-preview-tile {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: 0;
+  padding: 0;
+  background: #111;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gallery-preview-tile img,
+.gallery-preview-tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* =========================================
+   BOTTOM BAR
+========================================= */
+
+.gallery-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 64px;
+
+  background: rgba(20, 20, 20, 0.96);
+  border-top: 1px solid #292929;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 18px;
+  box-sizing: border-box;
+
+  z-index: 20;
+}
+
+.gallery-bottom div {
+  color: #fff;
+  font-size: 14px;
+}
+
+.gallery-bottom button {
+  border: 0;
+  border-radius: 8px;
+  background: #0095f6;
+  color: #fff;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-header {
+    height: 58px;
+  }
+
+  .gallery-header h1 {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 1000px) {
+
+ 
+.gallery-page {
+  width: 430px;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  box-sizing: border-box;
+  position: relative;
+}
+
+}

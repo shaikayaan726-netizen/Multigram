@@ -1,0 +1,168 @@
+.story-share-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.65);
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    z-index: 500;
+}
+
+
+.story-share-panel {
+
+    width: 100%;
+    max-width: 470px;
+
+    background: #202328;
+
+    color: white;
+
+    border-radius: 25px 25px 0 0;
+
+    padding: 20px 16px 25px;
+}
+
+
+.story-share-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.story-share-header strong {
+
+    font-size: 18px;
+}
+
+
+.story-share-header button {
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+.story-destination {
+
+    width: 100%;
+
+    min-height: 70px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: transparent;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 10px;
+
+    margin-bottom: 8px;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.story-destination.active {
+
+    background: #34373d;
+}
+
+
+.story-destination > div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.story-destination span {
+
+    color: #999;
+
+    font-size: 12px;
+}
+
+
+.story-share-avatar,
+.close-friends-avatar {
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.story-share-avatar {
+
+    background: #555;
+}
+
+
+.close-friends-avatar {
+
+    background: #20d568;
+}
+
+
+.story-final-share {
+
+    width: 100%;
+
+    height: 48px;
+
+    margin-top: 15px;
+
+    border: none;
+
+    border-radius: 24px;
+
+    background: #0095f6;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}

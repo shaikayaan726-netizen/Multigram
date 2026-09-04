@@ -1,0 +1,545 @@
+/* ===========================
+Reset
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ===========================
+Body
+=========================== */
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #fafafa;
+}
+
+
+/* ===========================
+Followers Page
+=========================== */
+
+.Followers-page {
+    width: 100%;
+
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding-bottom: 60px;
+
+    background: #fafafa;
+
+    overflow-x: hidden;
+}
+
+
+/* ===========================
+Navbar
+=========================== */
+
+.followers-nav {
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+}
+
+
+/* ===========================
+Back Button
+=========================== */
+
+.followers-back-btn {
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #262626;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+}
+
+
+/* ===========================
+Back Hover
+=========================== */
+
+.followers-back-btn:hover {
+    background: #f5f5f5;
+}
+
+
+/* ===========================
+Navbar Heading
+=========================== */
+
+.followers-nav h1 {
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #262626;
+}
+
+
+/* ===========================
+Navbar Right Space
+=========================== */
+
+.followers-nav-space {
+    width: 35px;
+
+    height: 35px;
+}
+
+
+/* ===========================
+Search
+=========================== */
+
+.followers-search {
+    width: 100%;
+
+    padding: 12px 15px;
+
+    background: #ffffff;
+}
+
+
+/* ===========================
+Search Input
+=========================== */
+
+.followers-search input {
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 15px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 10px;
+
+    background: #efefef;
+
+    color: #262626;
+
+    font-size: 15px;
+}
+
+
+/* ===========================
+Placeholder
+=========================== */
+
+.followers-search input::placeholder {
+    color: #8e8e8e;
+}
+
+
+/* ===========================
+Followers List
+=========================== */
+
+.followers-list {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+}
+
+
+/* ===========================
+Follower Row
+=========================== */
+
+.followers-profile {
+    width: 100%;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* ===========================
+Profile Left
+=========================== */
+
+.followers-profile-dp {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
+
+    flex: 1;
+
+    cursor: pointer;
+}
+
+
+/* ===========================
+Profile Image
+=========================== */
+
+.followers-profile-dp img {
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+
+/* ===========================
+User Information
+=========================== */
+
+.followers-info {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+/* ===========================
+Username
+=========================== */
+
+.followers-info h3 {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #262626;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ===========================
+Full Name
+=========================== */
+
+.followers-info p {
+    font-size: 13px;
+
+    color: #737373;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ===========================
+Common Follow Button
+=========================== */
+
+.followers-profile-btn {
+    width: 90px;
+
+    height: 36px;
+
+    flex-shrink: 0;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+
+/* ===========================
+Follow
+=========================== */
+
+.followers-profile-btn.follow-btn {
+    background: #0095f6;
+
+    color: #ffffff;
+
+    border: 1px solid #0095f6;
+}
+
+
+/* ===========================
+Follow Hover
+=========================== */
+
+.followers-profile-btn.follow-btn:hover {
+    background: #1877f2;
+
+    border-color: #1877f2;
+}
+
+
+/* ===========================
+Following
+=========================== */
+
+.followers-profile-btn.following-btn {
+    background: #ffffff;
+
+    color: #262626;
+
+    border: 1px solid #dbdbdb;
+}
+
+
+/* ===========================
+Following Hover
+=========================== */
+
+.followers-profile-btn.following-btn:hover {
+    background: #f5f5f5;
+}
+
+
+/* ===========================
+No Users
+=========================== */
+
+.followers-no-users {
+    width: 100%;
+
+    padding: 40px 15px;
+
+    text-align: center;
+
+    color: #8e8e8e;
+
+    font-size: 14px;
+}
+
+
+/* ===========================
+Bottom Navigation
+=========================== */
+
+.bottom-nav {
+    position: fixed;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    max-width: 470px;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    background: #ffffff;
+
+    border-top: 1px solid #dbdbdb;
+
+    z-index: 20;
+}
+
+
+/* ===========================
+Bottom Navigation Buttons
+=========================== */
+
+.bottom-nav .icon-btn {
+    width: 20%;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #000000;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* ===========================
+Bottom Navigation Hover
+=========================== */
+
+.bottom-nav .icon-btn:hover {
+    background: #fafafa;
+}
+
+
+/* ===========================
+Mobile
+=========================== */
+
+@media (max-width: 470px) {
+
+    .Followers-page {
+        width: 100%;
+
+        max-width: none;
+
+        margin: 0;
+    }
+
+
+    .followers-nav {
+        padding: 0 12px;
+    }
+
+
+    .followers-search {
+        padding: 12px;
+    }
+
+
+    .followers-profile {
+        padding: 10px 12px;
+    }
+
+
+    .followers-profile-dp img {
+        width: 50px;
+
+        height: 50px;
+    }
+
+
+    .followers-profile-btn {
+        width: 85px;
+
+        height: 35px;
+    }
+
+
+    .bottom-nav {
+        width: 100%;
+
+        max-width: none;
+    }
+
+}
+
+
+/* ===========================
+Desktop / Laptop
+=========================== */
+
+@media (min-width: 471px) {
+
+    .Followers-page {
+        width: 470px;
+
+        max-width: 470px;
+
+        margin: 0 auto;
+    }
+
+
+    .bottom-nav {
+        width: 470px;
+
+        max-width: 470px;
+    }
+
+}

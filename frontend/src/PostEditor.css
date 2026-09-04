@@ -1,0 +1,1006 @@
+/* =========================================================
+   POST EDITOR - MOBILE FIRST
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+.post-editor-page {
+    width: 100%;
+    max-width: 600px;
+    min-height: 100dvh;
+    margin: 0 auto;
+
+    background: #000000;
+    color: #ffffff;
+
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.post-editor-nav {
+    width: 100%;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 14px;
+
+    background: #000000;
+    color: #ffffff;
+
+    border-bottom: 1px solid #262626;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.post-editor-nav h1 {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.editor-icon-btn {
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+}
+
+.editor-icon-btn svg {
+    width: 23px;
+    height: 23px;
+}
+
+.editor-icon-btn:active {
+    background: #222222;
+}
+
+.editor-next-btn {
+    margin-left: auto;
+
+    padding: 7px 4px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #0095f6;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   IMAGE AREA
+========================================================= */
+
+.editor-image-area {
+    width: 100%;
+
+    /*
+       Mobile screen ke according height.
+       Image ko screen se bahar nahi jaane dega.
+    */
+    height: min(68dvh, 600px);
+
+    min-height: 280px;
+
+    background: #000000;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.editor-main-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.editor-no-image {
+    color: #888888;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TEXT OVERLAY
+========================================================= */
+
+.editor-text-overlay {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    max-width: 90%;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    word-break: break-word;
+    white-space: pre-wrap;
+
+    font-size: clamp(26px, 8vw, 42px);
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.6);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FONTS
+========================================================= */
+
+.font-classic {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.font-signature {
+    font-family: "Brush Script MT", cursive;
+    font-style: italic;
+}
+
+.font-editor {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-poster {
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
+}
+
+.font-bubble {
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: 800;
+}
+
+.font-typewriter {
+    font-family: "Courier New", monospace;
+}
+
+
+/* =========================================================
+   MAIN EDITOR TOOLS
+========================================================= */
+
+.editor-tools {
+    width: 100%;
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background: #000000;
+
+    border-top: 1px solid #262626;
+    border-bottom: 1px solid #262626;
+
+    padding: 4px 4px;
+
+    overflow: hidden;
+}
+
+.editor-tools button {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 68px;
+
+    padding: 4px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+}
+
+.editor-tools button svg {
+    width: 22px;
+    height: 22px;
+}
+
+.editor-tools button span {
+    font-size: 11px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+.editor-tools button:active {
+    background: #1c1c1c;
+}
+
+
+/* =========================================================
+   BOTTOM PANEL
+========================================================= */
+
+.editor-bottom-panel {
+    width: 100%;
+
+    background: #000000;
+    color: #ffffff;
+
+    border-top: 1px solid #262626;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.panel-header {
+    width: 100%;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 12px;
+
+    background: #000000;
+    color: #ffffff;
+
+    border-bottom: 1px solid #262626;
+}
+
+.panel-header strong {
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.panel-header button {
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+}
+
+.panel-header button svg {
+    width: 22px;
+    height: 22px;
+}
+
+.panel-header button:active {
+    background: #222222;
+}
+
+
+/* =========================================================
+   TEXT INPUT
+========================================================= */
+
+.text-input {
+    width: calc(100% - 28px);
+
+    height: 48px;
+
+    margin: 14px;
+
+    padding: 0 13px;
+
+    border: 1px solid #444444;
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #202020;
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+.text-input::placeholder {
+    color: #888888;
+}
+
+.text-input:focus {
+    border-color: #777777;
+}
+
+
+/* =========================================================
+   FONT SELECTOR
+========================================================= */
+
+.font-selector {
+    width: 100%;
+
+    display: flex;
+
+    gap: 8px;
+
+    padding: 2px 14px 14px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+}
+
+.font-selector::-webkit-scrollbar {
+    display: none;
+}
+
+.font-option {
+    flex: 0 0 auto;
+
+    min-width: 82px;
+    height: 40px;
+
+    padding: 0 10px;
+
+    border: 1px solid #444444;
+    border-radius: 9px;
+
+    background: #111111;
+    color: #ffffff;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.font-option.active {
+    background: #292929;
+
+    border: 2px solid #ffffff;
+}
+
+
+/* =========================================================
+   TEXT COLORS
+========================================================= */
+
+.text-colors {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 4px 14px 18px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+.text-colors::-webkit-scrollbar {
+    display: none;
+}
+
+.color-circle {
+    flex: 0 0 auto;
+
+    width: 30px;
+    height: 30px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    border: 2px solid #444444;
+
+    cursor: pointer;
+}
+
+.color-circle.active {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   MUSIC SEARCH
+========================================================= */
+
+.music-search {
+    width: calc(100% - 28px);
+
+    height: 48px;
+
+    margin: 14px;
+
+    padding: 0 13px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    background: #202020;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+.music-search svg {
+    flex: 0 0 auto;
+
+    width: 20px;
+    height: 20px;
+
+    color: #999999;
+}
+
+.music-search input {
+    width: 100%;
+    min-width: 0;
+
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+.music-search input::placeholder {
+    color: #888888;
+}
+
+
+/* =========================================================
+   MUSIC TABS
+========================================================= */
+
+.music-tabs {
+    width: 100%;
+
+    display: flex;
+
+    gap: 8px;
+
+    padding: 2px 14px 14px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+}
+
+.music-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.music-tabs button {
+    flex: 0 0 auto;
+
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 18px;
+
+    background: #242424;
+    color: #ffffff;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.music-tabs button.active {
+    background: #ffffff;
+    color: #000000;
+}
+
+
+/* =========================================================
+   MUSIC LIST
+========================================================= */
+
+.music-list {
+    width: 100%;
+
+    /*
+       Important:
+       list apne panel ke andar scroll karegi.
+    */
+    max-height: 390px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: thin;
+}
+
+.music-item {
+    width: 100%;
+
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 9px 14px;
+
+    background: #000000;
+    color: #ffffff;
+
+    border-bottom: 1px solid #242424;
+
+    cursor: pointer;
+
+    overflow: hidden;
+}
+
+.music-item:hover {
+    background: #171717;
+}
+
+.music-item.selected {
+    background: #262626;
+}
+
+
+/* =========================================================
+   MUSIC COVER
+========================================================= */
+
+.music-cover {
+    width: 50px;
+    height: 50px;
+
+    flex: 0 0 50px;
+
+    border-radius: 7px;
+
+    background: #242424;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.music-cover svg {
+    width: 22px;
+    height: 22px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   MUSIC INFO
+========================================================= */
+
+.music-info {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    overflow: hidden;
+}
+
+.music-info strong {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.music-info span {
+    color: #999999;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.music-item > svg {
+    width: 20px;
+    height: 20px;
+
+    flex: 0 0 20px;
+
+    color: #bbbbbb;
+}
+
+
+/* =========================================================
+   FILTER GRID
+========================================================= */
+
+.filter-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 10px;
+
+    padding: 14px;
+
+    overflow: hidden;
+}
+
+.filter-item {
+    min-width: 0;
+
+    border: none;
+
+    padding: 0;
+
+    background: transparent;
+    color: #ffffff;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.filter-item img,
+.filter-preview-empty {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    display: block;
+}
+
+.filter-preview-empty {
+    background: #222222;
+
+    color: #888888;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-item span {
+    max-width: 100%;
+
+    color: #bbbbbb;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.filter-item.active img,
+.filter-item.active .filter-preview-empty {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.filter-item.active span {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   EDIT CONTROLS
+========================================================= */
+
+.edit-options {
+    width: 100%;
+
+    padding: 14px;
+
+    overflow: hidden;
+}
+
+.edit-control {
+    width: 100%;
+
+    margin-bottom: 21px;
+}
+
+.edit-label {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 9px;
+}
+
+.edit-label span {
+    color: #ffffff;
+
+    font-size: 14px;
+}
+
+.edit-label b {
+    color: #999999;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.edit-control input[type="range"] {
+    width: 100%;
+
+    height: 5px;
+
+    display: block;
+
+    cursor: pointer;
+
+    accent-color: #ffffff;
+}
+
+
+/* =========================================================
+   APPLY BUTTON
+========================================================= */
+
+.edit-done-button {
+    width: calc(100% - 28px);
+
+    height: 46px;
+
+    margin: 0 14px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #000000;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.edit-done-button:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   SMALL MOBILE - 360px / 375px
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .post-editor-nav {
+        padding: 0 10px;
+    }
+
+    .editor-tools {
+        padding: 3px 2px;
+    }
+
+    .editor-tools button {
+        height: 66px;
+    }
+
+    .editor-tools button span {
+        font-size: 10px;
+    }
+
+    .editor-tools button svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .music-item {
+        padding: 9px 10px;
+        gap: 9px;
+    }
+
+    .music-cover {
+        width: 46px;
+        height: 46px;
+        flex-basis: 46px;
+    }
+
+    .music-info strong {
+        font-size: 13px;
+    }
+
+    .music-info span {
+        font-size: 11px;
+    }
+
+    .filter-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 9px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 330px) {
+
+    .editor-tools button span {
+        font-size: 9px;
+    }
+
+    .music-cover {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+    }
+
+    .music-info strong {
+        font-size: 12px;
+    }
+
+    .music-info span {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / DESKTOP
+========================================================= */
+
+@media (min-width: 601px) {
+
+    .post-editor-page {
+        min-height: 100vh;
+    }
+
+    .editor-image-area {
+        height: 600px;
+    }
+
+    .music-list {
+        max-height: 430px;
+    }
+
+}
+
+
+/* =========================================================
+   SAFE AREA - MOBILE PHONES
+========================================================= */
+
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+
+    .editor-bottom-panel {
+        padding-bottom:
+            env(safe-area-inset-bottom);
+    }
+
+}

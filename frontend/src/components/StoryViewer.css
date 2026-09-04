@@ -1,0 +1,1005 @@
+/* =========================================================
+   STORY VIEWER
+   Instagram-style Story Viewer
+========================================================= */
+
+.story-viewer-overlay {
+
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: #000 !important;
+
+    color: #fff;
+
+    z-index: 999999 !important;
+
+    overflow: hidden !important;
+
+    display: block !important;
+
+    isolation: isolate;
+
+}
+
+
+/* =========================================================
+   CENTER STORY AREA
+   Desktop = 470px mobile-style viewer
+   Mobile = complete device
+========================================================= */
+
+.story-viewer-content {
+
+    position: absolute !important;
+
+    top: 0 !important;
+    bottom: 0 !important;
+
+    left: 50% !important;
+    right: auto !important;
+
+    width: 470px !important;
+
+    height: 100vh !important;
+    height: 100dvh !important;
+
+    margin: 0 !important;
+
+    transform: translateX(-50%) !important;
+
+    background: #000 !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+
+    z-index: 5;
+
+}
+
+
+/* =========================================================
+   MEDIA
+========================================================= */
+
+.story-viewer-media {
+
+    position: relative !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: 100% !important;
+    max-height: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    object-position: center center !important;
+
+    object-fit: contain !important;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.story-viewer-progress {
+
+    position: absolute !important;
+
+    top: 9px !important;
+
+    left: 50% !important;
+
+    right: auto !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 450px !important;
+
+    height: 4px;
+
+    display: flex;
+
+    gap: 4px;
+
+    z-index: 1000;
+
+}
+
+
+.story-progress-track {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 4px;
+
+    background: rgba(255,255,255,.35);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+.story-progress-fill {
+
+    height: 100%;
+
+    width: 0;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+}
+
+
+.story-progress-fill.completed {
+
+    width: 100%;
+
+}
+
+
+.story-progress-fill.active {
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.story-viewer-header {
+
+    position: absolute !important;
+
+    top: 18px !important;
+
+    left: 50% !important;
+
+    right: auto !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 440px !important;
+
+    height: 55px;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 1000;
+
+}
+
+
+/* =========================================================
+   USER INFO
+========================================================= */
+
+.story-viewer-user {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 0;
+
+}
+
+
+.story-viewer-user img {
+
+    width: 40px !important;
+
+    height: 40px !important;
+
+    min-width: 40px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border: 1.5px solid #fff;
+
+    display: block;
+
+}
+
+
+.story-viewer-user-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    min-width: 0;
+
+}
+
+
+.story-viewer-user strong {
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.story-viewer-user span {
+
+    color: rgba(255,255,255,.75);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   MUSIC IN HEADER
+========================================================= */
+
+.story-viewer-music-info {
+
+    max-width: 150px;
+
+    margin-left: 5px;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.story-viewer-close {
+
+    width: 42px !important;
+
+    height: 42px !important;
+
+    padding: 0 !important;
+
+    border: none !important;
+
+    outline: none !important;
+
+    background: transparent !important;
+
+    color: #fff !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================================================
+   STORY ELEMENTS
+========================================================= */
+
+.story-viewer-text {
+
+    position: absolute !important;
+
+    max-width: 85%;
+
+    text-align: center;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    white-space: pre-wrap;
+
+    word-break: break-word;
+
+    text-shadow: 0 2px 8px #000;
+
+    pointer-events: none;
+
+    z-index: 100;
+
+    transform-origin: center;
+
+}
+
+
+.story-viewer-sticker {
+
+    position: absolute !important;
+
+    font-size: 70px;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+
+    z-index: 100;
+
+    transform-origin: center;
+
+}
+
+
+.story-viewer-mention {
+
+    position: absolute !important;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    background: rgba(0,0,0,.65);
+
+    color: #fff;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    z-index: 100;
+
+    transform-origin: center;
+
+}
+
+
+/* =========================================================
+   MUSIC ELEMENT
+========================================================= */
+
+.story-viewer-music {
+
+    position: absolute !important;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    background: rgba(0,0,0,.65);
+
+    color: #fff;
+
+    font-size: 12px;
+
+    z-index: 100;
+
+}
+
+
+/* =========================================================
+   LEFT / RIGHT TAP AREAS
+========================================================= */
+
+.story-viewer-left,
+.story-viewer-right {
+
+    position: absolute !important;
+
+    top: 70px !important;
+
+    bottom: 90px !important;
+
+    width: 35% !important;
+
+    height: auto !important;
+
+    border: none !important;
+
+    border-radius: 0 !important;
+
+    background: transparent !important;
+
+    color: transparent !important;
+
+    z-index: 500 !important;
+
+    cursor: pointer;
+
+    display: block !important;
+
+}
+
+
+.story-viewer-left {
+
+    left: 0 !important;
+
+}
+
+
+.story-viewer-right {
+
+    right: 0 !important;
+
+}
+
+
+/* Don't show navigation circles */
+.story-viewer-left svg,
+.story-viewer-right svg {
+
+    display: none;
+
+}
+
+
+/* =========================================================
+   OWN STORY VIEWS
+========================================================= */
+
+.story-viewer-views {
+
+    position: absolute !important;
+
+    left: 50% !important;
+
+    bottom: 78px !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 440px !important;
+
+    color: #fff;
+
+    font-size: 12px;
+
+    z-index: 1000;
+
+}
+
+
+/* =========================================================
+   BOTTOM ACTIONS
+========================================================= */
+
+.story-viewer-actions {
+
+    position: absolute !important;
+
+    left: 50% !important;
+
+    bottom: 12px !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 440px !important;
+
+    min-height: 52px;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+    background: transparent !important;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    z-index: 1000;
+
+}
+
+
+/* =========================================================
+   SEND MESSAGE
+========================================================= */
+
+.story-message-box {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 44px;
+
+    border: 1px solid rgba(255,255,255,.75);
+
+    border-radius: 24px;
+
+    padding: 0 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    color: rgba(255,255,255,.9);
+
+    font-size: 13px;
+
+    background: rgba(0,0,0,.15);
+
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.story-viewer-actions button {
+
+    width: 40px !important;
+
+    height: 44px !important;
+
+    padding: 0 !important;
+
+    border: none !important;
+
+    outline: none !important;
+
+    background: transparent !important;
+
+    color: #fff !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+}
+
+
+.story-viewer-actions button svg {
+
+    width: 25px;
+
+    height: 25px;
+
+    stroke-width: 1.8;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   COMPLETE DEVICE VIEWPORT
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .story-viewer-overlay {
+
+        position: fixed !important;
+
+        inset: 0 !important;
+
+        width: 100vw !important;
+
+        height: 100vh !important;
+
+        height: 100dvh !important;
+
+    }
+
+
+    .story-viewer-content {
+
+        position: absolute !important;
+
+        top: 0 !important;
+        bottom: 0 !important;
+
+        left: 0 !important;
+        right: 0 !important;
+
+        width: 100vw !important;
+
+        height: 100vh !important;
+
+        height: 100dvh !important;
+
+        transform: none !important;
+
+        margin: 0 !important;
+
+    }
+
+
+    /* Instagram-like mobile story media */
+    .story-viewer-media {
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        object-fit: cover !important;
+
+        object-position: center center !important;
+
+    }
+
+
+    .story-viewer-progress {
+
+        top: 7px !important;
+
+        left: 10px !important;
+
+        right: 10px !important;
+
+        transform: none !important;
+
+        width: auto !important;
+
+        height: 3px;
+
+    }
+
+
+    .story-progress-track {
+
+        height: 3px;
+
+    }
+
+
+    .story-viewer-header {
+
+        top: 17px !important;
+
+        left: 12px !important;
+
+        right: 12px !important;
+
+        transform: none !important;
+
+        width: auto !important;
+
+        height: 50px;
+
+    }
+
+
+    .story-viewer-user img {
+
+        width: 38px !important;
+
+        height: 38px !important;
+
+        min-width: 38px;
+
+    }
+
+
+    .story-viewer-close {
+
+        width: 40px !important;
+
+        height: 40px !important;
+
+    }
+
+
+    .story-viewer-actions {
+
+        left: 12px !important;
+
+        right: 12px !important;
+
+        bottom: 10px !important;
+
+        transform: none !important;
+
+        width: auto !important;
+
+        gap: 7px;
+
+    }
+
+
+    .story-message-box {
+
+        height: 44px;
+
+        padding: 0 15px;
+
+        font-size: 13px;
+
+    }
+
+
+    .story-viewer-actions button {
+
+        width: 40px !important;
+
+    }
+
+
+    .story-viewer-views {
+
+        left: 12px !important;
+
+        bottom: 65px !important;
+
+        transform: none !important;
+
+        width: auto !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 601px) {
+
+    .story-viewer-overlay {
+
+        background: #000;
+
+    }
+
+
+    .story-viewer-content {
+
+        width: 470px !important;
+
+        height: 100vh !important;
+
+        height: 100dvh !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   GLOBAL CSS CONFLICT PROTECTION
+========================================================= */
+
+.story-viewer-overlay img,
+.story-viewer-overlay video {
+
+    float: none !important;
+
+    position: relative !important;
+
+    left: auto !important;
+
+    right: auto !important;
+
+    top: auto !important;
+
+    bottom: auto !important;
+
+    margin-left: auto !important;
+
+    margin-right: auto !important;
+
+}
+
+
+/* =========================================================
+   PREVENT HOME CONTENT FROM AFFECTING VIEWER
+========================================================= */
+
+.story-viewer-overlay,
+.story-viewer-overlay * {
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   LANDSCAPE MEDIA CENTER FIX
+========================================================= */
+
+.story-viewer-content .story-viewer-media {
+
+    align-self: center !important;
+
+    justify-self: center !important;
+
+}
+
+
+/* =========================================================
+   SAFE AREA FOR PHONES
+========================================================= */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+
+    .story-viewer-actions {
+
+        padding-bottom: env(safe-area-inset-bottom) !important;
+
+    }
+
+}
+.story-viewer-header-actions {
+    margin-left: auto;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    flex-shrink: 0;
+}
+
+.story-viewer-header-actions button {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background: transparent;
+
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.story-viewer-header-actions svg {
+    width: 23px;
+    height: 23px;
+}
+
+.story-viewer-delete-menu {
+    position: absolute;
+
+    top: 44px;
+    right: 0;
+
+    width: 155px;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,.35);
+
+    z-index: 2000;
+}
+
+.story-viewer-delete-menu button {
+    width: 100%;
+    height: 48px;
+
+    border: none;
+    background: #fff;
+
+    color: #ed4956;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 15px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.story-viewer-delete-menu button svg {
+    width: 18px;
+    height: 18px;
+}
+.story-viewer-media-content {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    display: block;
+
+}
+.story-viewer-media {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #000;
+
+}

@@ -1,0 +1,216 @@
+.story-music-panel {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    max-height: 70%;
+
+    background: #202328;
+
+    border-radius: 25px 25px 0 0;
+
+    padding: 18px;
+
+    z-index: 100;
+
+    overflow-y: auto;
+}
+
+
+.story-music-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+
+.story-music-header strong {
+
+    font-size: 18px;
+}
+
+
+.story-music-header button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #5865f2;
+
+    font-weight: 700;
+}
+
+
+.story-music-search {
+
+    height: 48px;
+
+    background: #36393f;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 14px;
+}
+
+
+.story-music-search input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+}
+
+
+.story-music-tabs {
+
+    display: flex;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding: 14px 0;
+}
+
+
+.story-music-tabs button {
+
+    white-space: nowrap;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 9px 14px;
+
+    background: #303339;
+
+    color: #bbb;
+
+    cursor: pointer;
+}
+
+
+.story-music-tabs button.active {
+
+    background: white;
+
+    color: black;
+}
+
+
+.story-music-list {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.story-music-item {
+
+    min-height: 65px;
+
+    border: none;
+
+    border-bottom: 1px solid #34373c;
+
+    background: transparent;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    padding: 8px 0;
+}
+
+
+.story-music-item.selected {
+
+    background: #2c3035;
+}
+
+
+.story-music-cover {
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 7px;
+
+    background: #3a3d42;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.story-music-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.story-music-info strong {
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.story-music-info span {
+
+    color: #999;
+
+    font-size: 12px;
+}
+
+
+.story-music-play {
+
+    font-size: 13px;
+}

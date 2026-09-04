@@ -1,0 +1,24 @@
+CALL SYSTEM INSTALL / WIRING
+
+1) Frontend: npm install socket.io-client
+2) Put callClient.js beside the call JSX files (or adjust its import path).
+3) Backend: install socket.io if not already installed (your package already has it).
+4) Wire Socket.IO in backend/index.js using callSignaling.js.
+
+IMPORTANT: Incoming calls only work if the logged-in browser registers its userId.
+Add this once in a global component (for example App.jsx):
+
+import { getCallSocket, getMyUserId } from "./pages/callClient";
+useEffect(() => {
+  const s = getCallSocket();
+  const id = getMyUserId();
+  if (id) s.emit("user:register", { userId: id });
+  return () => {};
+}, []);
+
+For incoming-call navigation, listen globally for call:incoming and navigate to the
+matching incoming route with state { user: data.user, callId: data.callId }.
+
+This bundle fixes the UI/call signaling foundation. Persistent missed-call records
+and call duration in MongoDB require adding a call/call-history schema or extending
+your existing Message controller/schema; those files were not included in call.zip.

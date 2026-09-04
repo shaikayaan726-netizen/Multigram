@@ -1,0 +1,171 @@
+.security-detail-page {
+    width: 100%;
+    max-width: 470px;
+    min-height: 100vh;
+    margin: auto;
+    background: #fafafa;
+}
+
+
+.security-detail-nav {
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 0 15px;
+
+    background: white;
+
+    border-bottom: 1px solid #dbdbdb;
+}
+
+
+.security-detail-nav h1 {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+
+.security-detail-back-btn {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    cursor: pointer;
+}
+
+
+.security-checkup-intro {
+    padding: 22px 15px;
+
+    background: white;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.security-checkup-intro h2 {
+    font-size: 18px;
+}
+
+
+.security-checkup-intro p {
+    margin-top: 8px;
+
+    color: #737373;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.security-detail-section {
+    margin-top: 10px;
+
+    background: white;
+}
+
+
+.security-check-row {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 14px 15px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    cursor: pointer;
+}
+
+
+.security-check-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+
+.security-check-info {
+    flex: 1;
+}
+
+
+.security-check-info strong {
+    font-size: 14px;
+}
+
+
+.security-check-info p {
+    margin-top: 5px;
+
+    color: #737373;
+
+    font-size: 12px;
+}
+
+
+.security-check-status {
+    color: #ed4956;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.security-check-status.complete {
+    color: #2e9b5f;
+}
+
+
+.security-checkup-summary {
+    margin-top: 10px;
+
+    padding: 18px 15px;
+
+    background: white;
+}
+
+
+.security-checkup-summary strong {
+    font-size: 15px;
+}
+
+
+.security-checkup-summary p {
+    margin-top: 6px;
+
+    font-size: 13px;
+
+    color: #737373;
+}
+
+
+@media (max-width: 470px) {
+
+    .security-detail-page {
+        max-width: 100%;
+    }
+
+}

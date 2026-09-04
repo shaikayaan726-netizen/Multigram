@@ -1,0 +1,125 @@
+.psc-page {
+    width: 100%;
+    max-width: 470px;
+    min-height: 100vh;
+    margin: auto;
+    background: #ffffff;
+    color: #262626;
+}
+
+.psc-nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 0 15px;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.psc-nav h1 {
+    font-size: 21px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.psc-back {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    color: #111111;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.psc-section {
+    width: 100%;
+    padding: 25px 29px 18px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.psc-section h2 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.psc-radio-option {
+    width: 100%;
+    min-height: 55px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-size: 17px;
+    color: #3c3c3c;
+    text-align: left;
+    cursor: pointer;
+}
+
+.psc-radio-option:hover {
+    background: #fafafa;
+}
+
+.psc-radio {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #8e9399;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.psc-radio.selected {
+    border-color: #111111;
+}
+
+.psc-radio.selected > span {
+    width: 20px;
+    height: 20px;
+    background: #111111;
+    border-radius: 50%;
+}
+
+.psc-example {
+    margin: 2px 0 0;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #8a8a8a;
+}
+
+@media (max-width: 470px) {
+
+    .psc-page {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .psc-nav {
+        height: 58px;
+        padding: 0 12px;
+    }
+
+    .psc-nav h1 {
+        font-size: 21px;
+    }
+
+    .psc-section {
+        padding-left: 29px;
+        padding-right: 29px;
+    }
+}

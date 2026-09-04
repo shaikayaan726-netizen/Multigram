@@ -1,0 +1,703 @@
+/* =========================================
+   CALL COMMON
+========================================= */
+
+.call-page,
+.video-call-page,
+.active-video-call-page {
+    width: 470px;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    background: #000;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.call-page *,
+.video-call-page *,
+.active-video-call-page * {
+    box-sizing: border-box;
+}
+
+.call-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 24px;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.call-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.chat-default-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    color: #666;
+    font-size: 32px;
+}
+
+.call-page h1,
+.video-call-page h1 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.call-page p,
+.video-call-page p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #aaa;
+    text-align: center;
+}
+
+.call-end {
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 50%;
+    background: #ed4956;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    flex: 0 0 auto;
+}
+
+.call-end:hover { filter: brightness(.95); }
+
+/* =========================================
+   INCOMING CALL
+========================================= */
+
+.incoming-call-page {
+    width: 470px;
+    min-height: 100vh;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+}
+
+.incoming-call-page .call-avatar {
+    width: 135px;
+    height: 135px;
+    margin-bottom: 28px;
+}
+
+.incoming-call-page .call-actions {
+    margin-top: 60px;
+}
+
+.call-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.call-actions button {
+    width: 68px;
+    height: 68px;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.call-reject { background: #ed4956; }
+.call-accept { background: #35c759; }
+
+
+/* =========================================
+   VOICE CALL REFINEMENT
+========================================= */
+
+.active-call-page {
+    width: 470px;
+    max-width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 24px;
+    position: relative;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.voice-call-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-24px);
+}
+
+.active-call-page .call-avatar {
+    width: 138px;
+    height: 138px;
+    margin: 0 0 22px;
+}
+
+.active-call-page h1 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #fff;
+}
+
+.active-call-page p {
+    margin: 9px 0 0;
+    font-size: 15px;
+    color: #aaa;
+}
+
+.active-call-page audio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.voice-enable-audio {
+    margin-top: 18px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 22px;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.voice-call-controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 34px;
+    margin: 0;
+    gap: 24px;
+}
+
+.voice-call-controls button {
+    width: 60px;
+    height: 60px;
+    border: 0;
+    border-radius: 50%;
+    background: #292929;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.voice-call-controls .call-end {
+    width: 64px;
+    height: 64px;
+    margin: 0;
+    background: #ed4956;
+}
+
+@media (max-width: 600px) {
+    .active-call-page {
+        width: 100%;
+        max-width: none;
+        height: 100dvh;
+        min-height: 100dvh;
+        padding: 20px;
+    }
+
+    .voice-call-content {
+        transform: translateY(-12px);
+    }
+
+    .active-call-page .call-avatar {
+        width: 132px;
+        height: 132px;
+    }
+
+    .voice-call-controls {
+        bottom: 28px;
+    }
+}
+
+/* =========================================
+   OUTGOING VIDEO CALL
+========================================= */
+
+.video-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.video-placeholder .call-avatar {
+    width: 120px;
+    height: 120px;
+}
+
+/* =========================================
+   ACTIVE VIDEO CALL
+========================================= */
+
+.active-video-call {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    overflow: hidden;
+    display: block;
+}
+
+.active-video-call .remote-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #000;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 1;
+}
+
+/* Keep the placeholder behind the actual video. */
+.active-video-call .remote-video-placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.active-video-call .remote-video-placeholder .call-avatar {
+    margin-bottom: 20px;
+}
+
+.active-video-call .local-video {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    width: 125px;
+    height: 170px;
+    border-radius: 14px;
+    background: #111;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid rgba(255,255,255,.35);
+    box-shadow: 0 4px 18px rgba(0,0,0,.55);
+    z-index: 10;
+    transform: scaleX(-1);
+}
+
+.active-video-call .video-call-status {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(0,0,0,.55);
+    color: #fff;
+    font-size: 13px;
+    line-height: 1;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.active-video-call .video-call-actions {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    z-index: 30;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.active-video-call .call-control {
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(40,40,40,.88);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active-video-call .video-call-actions .call-end {
+    width: 62px;
+    height: 62px;
+    margin: 0;
+    border: none;
+    border-radius: 50%;
+    background: #ed4956;
+    color: #fff;
+    font-size: 27px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+    .call-page,
+    .video-call-page,
+    .active-video-call-page {
+        width: 100%;
+        max-width: none;
+    }
+
+    .incoming-call-page {
+        padding: 20px;
+    }
+
+    .active-video-call {
+        width: 100%;
+        height: 100dvh;
+        min-height: 100dvh;
+    }
+
+    .active-video-call .remote-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .active-video-call .local-video {
+        top: 18px;
+        right: 14px;
+        width: 105px;
+        height: 148px;
+        border-radius: 12px;
+    }
+
+    .active-video-call .video-call-status {
+        top: 18px;
+        max-width: calc(100% - 150px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .active-video-call .video-call-actions {
+        bottom: 20px;
+        gap: 16px;
+    }
+
+    .active-video-call .call-control {
+        width: 54px;
+        height: 54px;
+    }
+
+    .active-video-call .video-call-actions .call-end {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (min-width: 601px) {
+    .call-page,
+    .video-call-page,
+    .active-video-call-page {
+        width: 470px;
+        max-width: 470px;
+        margin: 0 auto;
+    }
+
+    .active-video-call {
+        width: 470px;
+        max-width: 470px;
+        height: 100vh;
+        min-height: 100vh;
+    }
+}
+/* =========================================
+   CHAT DESIGN PROTECTION
+   Call CSS se chat kharab nahi hoga
+========================================= */
+
+.chat-page {
+    width: 100%;
+    max-width: 470px;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    background: #fff;
+    color: #262626;
+    overflow-x: hidden;
+}
+
+
+/* CHAT NAVBAR */
+
+.chat-nav {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 12px;
+
+    background: #fff;
+    border-bottom: 1px solid #dbdbdb;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+/* CHAT PROFILE */
+
+.chat-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* IMPORTANT:
+   Profile picture ko call-avatar
+   jaisa stretch hone nahi dena
+*/
+
+.chat-profile img {
+    width: 38px !important;
+    height: 38px !important;
+
+    min-width: 38px !important;
+    min-height: 38px !important;
+    max-width: 38px !important;
+    max-height: 38px !important;
+
+    border-radius: 50% !important;
+
+    object-fit: cover !important;
+
+    display: block;
+
+    flex: 0 0 38px !important;
+}
+
+
+/* CHAT USER */
+
+.chat-user {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.chat-user h3 {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #262626;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-user p {
+    margin: 2px 0 0;
+
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+
+/* CHAT CALL ICONS */
+
+.chat-icons {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+.chat-icons .icon-btn {
+    width: 30px !important;
+    height: 35px !important;
+
+    padding: 0;
+
+    font-size: 23px;
+}
+
+
+/* CHAT BODY */
+
+.chat-body {
+    width: 100%;
+
+    padding: 16px 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    background: #fff;
+}
+
+
+/* INPUT */
+
+.chat-input-wrapper {
+    position: fixed;
+
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+    max-width: 470px;
+
+    padding: 7px 8px;
+
+    background: #fff;
+
+    border-top: 1px solid #eee;
+
+    z-index: 100;
+}
+
+
+/* =========================================
+   VERY IMPORTANT
+   CALL AVATAR ONLY FOR CALL PAGES
+========================================= */
+
+.call-page .call-avatar,
+.video-call-page .call-avatar,
+.active-video-call .call-avatar,
+.active-video-call-page .call-avatar,
+.incoming-call-page .call-avatar {
+    flex-shrink: 0;
+}
+
+
+/* NEVER let call styles affect chat */
+
+.chat-page .call-avatar {
+    width: auto;
+    height: auto;
+
+    margin: 0;
+
+    border-radius: 0;
+
+    background: transparent;
+
+    overflow: visible;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 470px) {
+
+    .chat-page {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .chat-input-wrapper {
+        max-width: none;
+    }
+
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 471px) {
+
+    .chat-page {
+        width: 470px;
+        max-width: 470px;
+        margin: 0 auto;
+    }
+
+}

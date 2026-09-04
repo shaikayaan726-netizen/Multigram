@@ -1,0 +1,85 @@
+.licenses-intro {
+    margin-top: 10px;
+
+    padding: 18px 15px;
+
+    background: white;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.licenses-intro p {
+    color: #737373;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.licenses-list {
+    margin-top: 10px;
+
+    background: white;
+}
+
+
+.license-item {
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.license-row {
+    width: 100%;
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 15px;
+
+    border: none;
+    background: white;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.license-row > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.license-row strong {
+    font-size: 14px;
+}
+
+
+.license-row span {
+    color: #737373;
+
+    font-size: 12px;
+}
+
+
+.license-details {
+    padding: 0 15px 16px;
+
+    color: #555;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.license-details p {
+    margin-top: 5px;
+}

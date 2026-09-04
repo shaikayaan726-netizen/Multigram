@@ -1,0 +1,118 @@
+.account-status-card {
+    margin-top: 10px;
+
+    padding: 30px 15px;
+
+    background: white;
+
+    text-align: center;
+}
+
+
+.account-status-card > svg {
+    font-size: 42px;
+
+    color: #2e9b5f;
+}
+
+
+.account-status-card h2 {
+    margin-top: 14px;
+
+    font-size: 17px;
+}
+
+
+.account-status-card p {
+    margin-top: 7px;
+
+    color: #737373;
+
+    font-size: 13px;
+}
+
+
+.account-status-section {
+    margin-top: 10px;
+
+    background: white;
+}
+
+
+.account-status-section h3 {
+    padding: 17px 15px;
+
+    font-size: 15px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.account-status-row {
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.account-status-row > svg {
+    color: #2e9b5f;
+
+    font-size: 21px;
+}
+
+
+.account-status-row div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.account-status-row strong {
+    font-size: 14px;
+}
+
+
+.account-status-row span {
+    color: #737373;
+
+    font-size: 12px;
+}
+
+
+.account-status-note {
+    margin-top: 10px;
+
+    display: flex;
+
+    gap: 10px;
+
+    padding: 18px 15px;
+
+    background: white;
+
+    color: #737373;
+}
+
+
+.account-status-note svg {
+    flex-shrink: 0;
+
+    font-size: 19px;
+}
+
+
+.account-status-note p {
+    font-size: 12px;
+
+    line-height: 1.5;
+}

@@ -1,0 +1,125 @@
+.cn-page {
+    width: 100%;
+    max-width: 470px;
+    min-height: 100vh;
+    margin: auto;
+    background: #ffffff;
+    color: #262626;
+}
+
+.cn-nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 0 15px;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 20;
+}
+
+.cn-nav h1 {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.cn-back {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.cn-section {
+    padding: 35px 29px 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.cn-section h2 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.cn-radio-option {
+    width: 100%;
+    min-height: 58px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-size: 17px;
+    color: #3c3c3c;
+    cursor: pointer;
+    text-align: left;
+}
+
+.cn-radio {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #8e9399;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cn-radio.selected {
+    border-color: #111111;
+}
+
+.cn-radio.selected > span {
+    width: 20px;
+    height: 20px;
+    background: #111111;
+    border-radius: 50%;
+}
+
+.cn-section p {
+    margin-top: 2px;
+    font-size: 14px;
+    color: #8a8a8a;
+    line-height: 1.35;
+}
+
+.cn-system-settings {
+    padding: 28px 29px;
+}
+
+.cn-system-settings button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: #405de6;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.cn-system-settings p {
+    margin-top: 20px;
+    color: #737373;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+@media (max-width: 470px) {
+
+    .cn-page {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cn-nav {
+        height: 58px;
+        padding: 0 12px;
+    }
+}

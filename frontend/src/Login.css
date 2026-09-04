@@ -1,0 +1,309 @@
+/* ===========================
+   Login Page
+=========================== */
+
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #fafafa;
+
+    padding: 20px 15px;
+
+    box-sizing: border-box;
+}
+
+
+/* ===========================
+   Main Login Box
+=========================== */
+
+.login-box {
+    width: 350px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbdbdb;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ===========================
+   Instagram Heading
+=========================== */
+
+.login-box h1 {
+    margin: 0 0 30px 0;
+
+    font-size: 40px;
+
+    font-weight: 600;
+
+    color: #000000;
+}
+
+
+/* ===========================
+   Inputs
+=========================== */
+
+.input-text {
+    width: 100%;
+
+    height: 38px;
+
+    padding: 10px;
+
+    margin-bottom: 10px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dbdbdb;
+
+    border-radius: 3px;
+
+    background: #fafafa;
+
+    color: #262626;
+
+    font-size: 12px;
+
+    outline: none;
+}
+
+
+.input-text:focus {
+    border-color: #a8a8a8;
+}
+
+
+.input-text::placeholder {
+    color: #737373;
+}
+
+
+/* ===========================
+   Login Button
+=========================== */
+
+.login-btn {
+    width: 100%;
+
+    padding: 9px;
+
+    margin-top: 5px;
+
+    margin-bottom: 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #0095f6;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.login-btn:hover {
+    background: #1877f2;
+}
+
+
+/* ===========================
+   OR Divider
+=========================== */
+
+.login-divider {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.login-divider hr {
+    flex: 1;
+
+    border: none;
+
+    border-top: 1px solid #dbdbdb;
+
+    margin: 0;
+}
+
+
+.login-divider span {
+    padding: 0 15px;
+
+    color: #737373;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* ===========================
+   Facebook Login
+=========================== */
+
+.login-fb {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
+
+
+.login-fb img {
+    width: 20px;
+
+    height: 20px;
+
+    object-fit: contain;
+}
+
+
+.login-fb p {
+    margin: 0 0 0 10px;
+
+    color: #385185;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* ===========================
+   Forgot Password
+=========================== */
+
+.forgot-password {
+    color: #00376b;
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+
+/* ===========================
+   Bottom Signup Box
+=========================== */
+
+.signup-box {
+    width: 350px;
+
+    margin-top: 10px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #dbdbdb;
+
+    text-align: center;
+}
+
+
+.signup-box p {
+    margin: 0;
+
+    color: #262626;
+
+    font-size: 14px;
+}
+
+
+.signup-box a {
+    color: #0095f6;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    margin-left: 5px;
+}
+
+
+/* ===========================
+   Mobile Responsive
+=========================== */
+
+@media (max-width: 500px) {
+
+    .login-container {
+        padding: 15px;
+    }
+
+    .login-box {
+        width: 100%;
+
+        max-width: 350px;
+
+        padding: 30px 25px;
+
+        border: 1px solid #dbdbdb;
+    }
+
+    .signup-box {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+}
+
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width: 360px) {
+
+    .login-container {
+        padding: 10px;
+    }
+
+    .login-box {
+        padding: 25px 18px;
+    }
+
+    .login-box h1 {
+        font-size: 34px;
+
+        margin-bottom: 25px;
+    }
+
+}

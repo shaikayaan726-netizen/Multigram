@@ -1,0 +1,1 @@
+.effects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.effects-grid button{height:100px;border:1px solid #555;border-radius:15px;background:#303238;color:#fff;font-weight:700}.effects-grid button.active{background:#fff;color:#111}.effects-grid small{display:block;margin-top:8px}

@@ -1,0 +1,554 @@
+/* ===========================
+   RESET
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ===========================
+   Message Page
+=========================== */
+
+.message-page {
+
+    width: 100%;
+
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    padding-bottom: 20px;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ===========================
+   Navbar
+=========================== */
+
+.message-nav {
+
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+/* ===========================
+   Back Button
+=========================== */
+
+.message-back {
+
+    position: absolute;
+
+    left: 15px;
+
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: none;
+
+    border: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    font-size: 25px;
+
+    color: #262626;
+
+    cursor: pointer;
+
+}
+
+
+.message-back:hover {
+
+    opacity: 0.6;
+
+}
+
+
+/* ===========================
+   Navbar Heading
+=========================== */
+
+.message-nav h1 {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #262626;
+
+}
+
+
+/* ===========================
+   Edit Icon
+=========================== */
+
+.message-edit {
+
+    position: absolute;
+
+    right: 15px;
+
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: none;
+
+    border: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    font-size: 22px;
+
+    color: #262626;
+
+    cursor: pointer;
+
+}
+
+
+.message-edit:hover {
+
+    opacity: 0.6;
+
+}
+
+
+/* ===========================
+   Search
+=========================== */
+
+.message-search {
+
+    width: 100%;
+
+    padding: 10px 15px;
+
+    background: #ffffff;
+
+}
+
+
+.message-search-box {
+
+    width: 100%;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 12px;
+
+    background: #efefef;
+
+    border-radius: 10px;
+
+    color: #8e8e8e;
+
+}
+
+
+.message-search-box svg {
+
+    font-size: 19px;
+
+    margin-right: 8px;
+
+    flex-shrink: 0;
+
+}
+
+
+.message-search-box input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 15px;
+
+    color: #262626;
+
+}
+
+
+.message-search-box input::placeholder {
+
+    color: #8e8e8e;
+
+}
+
+
+/* ===========================
+   Messages / Requests
+=========================== */
+
+.message-request {
+
+    width: 100%;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+.message-request h3 {
+
+    font-size: 15px;
+
+    color: #262626;
+
+}
+
+
+.message-request span {
+
+    color: #0095f6;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+/* ===========================
+   Message List
+=========================== */
+
+.message-list {
+
+    width: 100%;
+
+}
+
+
+/* ===========================
+   Message User
+=========================== */
+
+.message-dm {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 12px 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    cursor: pointer;
+
+    transition: background 0.15s ease;
+
+}
+
+
+.message-dm:hover {
+
+    background: #fafafa;
+
+}
+
+
+.message-dm:active {
+
+    background: #f0f0f0;
+
+}
+
+
+/* ===========================
+   Profile Image
+=========================== */
+
+.message-profile {
+
+    width: 55px;
+
+    height: 55px;
+
+    flex-shrink: 0;
+
+}
+
+
+.message-profile img {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+}
+
+
+/* ===========================
+   User Information
+=========================== */
+
+.message-user {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-left: 12px;
+
+    gap: 5px;
+
+    min-width: 0;
+
+}
+
+
+.message-user p {
+
+    padding: 0;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #262626;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.message-user span {
+
+    padding: 0;
+
+    font-size: 13px;
+
+    font-weight: normal;
+
+    color: #737373;
+
+    white-space: nowrap;
+
+}
+
+
+/* ===========================
+   No Result
+=========================== */
+
+.message-no-result {
+
+    width: 100%;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    color: #8e8e8e;
+
+    font-size: 14px;
+
+}
+
+
+/* ===========================
+   Phone
+=========================== */
+
+@media (max-width: 470px) {
+
+    .message-page {
+
+        width: 100%;
+
+        max-width: none;
+
+        margin: 0;
+
+    }
+
+
+    .message-nav {
+
+        padding: 0 12px;
+
+    }
+
+
+    .message-search {
+
+        padding: 10px 12px;
+
+    }
+
+
+    .message-request {
+
+        padding: 0 12px;
+
+    }
+
+
+    .message-dm {
+
+        padding: 12px;
+
+    }
+
+}
+
+
+/* ===========================
+   Laptop
+=========================== */
+
+@media (min-width: 471px) {
+
+    .message-page {
+
+        width: 470px;
+
+        max-width: 470px;
+
+        margin: 0 auto;
+
+    }
+
+}
+/* ===========================
+   Back Button
+=========================== */
+
+.message-back-btn {
+
+    position: absolute;
+
+    left: 15px;
+
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: none;
+
+    border: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    font-size: 25px;
+
+    color: #262626;
+
+    cursor: pointer;
+
+}
+
+
+.message-back-btn:hover {
+
+    opacity: 0.6;
+
+}
+.message-default-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 20px;
+    font-weight: 600;
+    overflow: hidden;
+}

@@ -1,0 +1,133 @@
+.camera-page {
+  width: 430px;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  position: relative;
+  overflow: hidden;
+
+  background: #000;
+  color: #fff;
+
+  box-sizing: border-box;
+}
+.camera-preview {
+  width: 100%;
+  height: 100vh;
+
+  display: block;
+
+  object-fit: cover;
+  background: #000;
+}
+.camera-top {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 16px;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.camera-top button {
+  border: 0;
+  background: rgba(30, 30, 30, 0.75);
+  color: #fff;
+
+  min-width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+.camera-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.camera-bottom button {
+  border: 0;
+  background: rgba(30, 30, 30, 0.75);
+  color: #fff;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.camera-bottom .shutter {
+  width: 76px;
+  height: 76px;
+
+  border: 5px solid #fff;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-bottom .shutter::after {
+  content: "";
+  width: 58px;
+  height: 58px;
+
+  border-radius: 50%;
+  background: #fff;
+}
+
+.camera-bottom .shutter.recording::after {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+}
+.camera-error {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: calc(100% - 40px);
+
+  text-align: center;
+
+  color: #fff;
+  z-index: 20;
+}
+
+.camera-error p {
+  margin-bottom: 16px;
+  color: #aaa;
+}
+
+.camera-error button {
+  border: 0;
+  padding: 10px 18px;
+  border-radius: 8px;
+
+  cursor: pointer;
+}

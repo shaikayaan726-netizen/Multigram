@@ -1,0 +1,518 @@
+/* ===========================
+Reset
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ===========================
+Location Page
+=========================== */
+
+.location-page {
+
+    width: 100%;
+
+    max-width: 470px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    background: white;
+}
+
+
+/* ===========================
+Navbar
+=========================== */
+
+.location-nav {
+
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: white;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+}
+
+
+/* ===========================
+Navbar Title
+=========================== */
+
+.location-nav h1 {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #262626;
+}
+
+
+/* ===========================
+Navbar Right Space
+=========================== */
+
+.location-nav-space {
+
+    width: 35px;
+
+    height: 35px;
+}
+
+
+/* ===========================
+Icon Button
+=========================== */
+
+.location-page .icon-btn {
+
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #262626;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+
+/* ===========================
+Icon Size
+=========================== */
+
+.location-page .icon-btn svg {
+
+    width: 22px;
+
+    height: 22px;
+}
+
+
+/* ===========================
+Icon Hover
+=========================== */
+
+.location-page .icon-btn:hover {
+
+    background: #f5f5f5;
+
+    border-radius: 50%;
+}
+
+
+/* ===========================
+Search Area
+=========================== */
+
+.location-search {
+
+    width: calc(100% - 30px);
+
+    height: 42px;
+
+    margin: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 12px;
+
+    background: #f2f2f2;
+
+    border-radius: 10px;
+}
+
+
+/* ===========================
+Search Icon
+=========================== */
+
+.location-search > svg {
+
+    width: 19px;
+
+    height: 19px;
+
+    color: #737373;
+
+    flex-shrink: 0;
+}
+
+
+/* ===========================
+Search Input
+=========================== */
+
+.location-search input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 15px;
+
+    color: #262626;
+}
+
+
+/* ===========================
+Search Placeholder
+=========================== */
+
+.location-search input::placeholder {
+
+    color: #8e8e8e;
+}
+
+
+/* ===========================
+Search Clear Button
+=========================== */
+
+.location-search .icon-btn {
+
+    width: 25px;
+
+    height: 25px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+
+/* ===========================
+Clear Icon
+=========================== */
+
+.location-search .icon-btn svg {
+
+    width: 18px;
+
+    height: 18px;
+
+    color: #737373;
+}
+
+
+/* ===========================
+Geoapify Attribution
+=========================== */
+
+.google-location-attribution {
+
+    width: 100%;
+
+    padding: 0 15px 8px 15px;
+
+    font-size: 11px;
+
+    color: #8e8e8e;
+
+    text-align: right;
+}
+
+
+/* ===========================
+Location List
+=========================== */
+
+.location-list {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: white;
+}
+
+
+/* ===========================
+Location Item
+=========================== */
+
+.location-item {
+
+    width: 100%;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px 15px;
+
+    background: white;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* ===========================
+Location Item Hover
+=========================== */
+
+.location-item:hover {
+
+    background: #fafafa;
+}
+
+
+/* ===========================
+Location Icon
+=========================== */
+
+.location-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    min-width: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f2f2f2;
+
+    color: #262626;
+}
+
+
+/* ===========================
+Location Icon SVG
+=========================== */
+
+.location-icon svg {
+
+    width: 21px;
+
+    height: 21px;
+}
+
+
+/* ===========================
+Location Information
+=========================== */
+
+.location-info {
+
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+/* ===========================
+Location Name
+=========================== */
+
+.location-info h3 {
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #262626;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ===========================
+Location Address
+=========================== */
+
+.location-info p {
+
+    font-size: 13px;
+
+    color: #8e8e8e;
+
+    line-height: 18px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ===========================
+Loading
+=========================== */
+
+.no-location {
+
+    width: 100%;
+
+    padding: 30px 15px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    color: #8e8e8e;
+}
+
+
+/* ===========================
+Error
+=========================== */
+
+.location-list + .no-location {
+
+    color: #ed4956;
+}
+
+
+/* ===========================
+Mobile
+=========================== */
+
+@media (max-width: 470px) {
+
+    .location-page {
+
+        width: 100%;
+
+        max-width: 470px;
+
+        min-height: 100vh;
+    }
+
+
+    .location-nav {
+
+        height: 60px;
+    }
+
+
+    .location-search {
+
+        width: calc(100% - 24px);
+
+        margin: 12px;
+
+        height: 42px;
+    }
+
+
+    .location-item {
+
+        padding: 10px 12px;
+
+        min-height: 68px;
+    }
+
+
+    .location-info h3 {
+
+        font-size: 14px;
+    }
+
+
+    .location-info p {
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* ===========================
+Desktop
+=========================== */
+
+@media (min-width: 471px) {
+
+    .location-page {
+
+        width: 470px;
+
+        max-width: 470px;
+
+        min-height: 100vh;
+    }
+
+}
