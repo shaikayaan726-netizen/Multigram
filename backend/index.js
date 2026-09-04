@@ -6,6 +6,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import https from "https";
+import http from "http";
 import { Server } from "socket.io";
 import dotenv from "dotenv";
 import path from "path";
@@ -84,10 +85,12 @@ const httpsOptions = {
 // ==========================================
 
 const server =
-    https.createServer(
-        httpsOptions,
-        app
-    );
+    process.env.RENDER
+        ? http.createServer(app)
+        : https.createServer(
+            httpsOptions,
+            app
+        );
 
 
 // ==========================================
