@@ -1102,33 +1102,14 @@ export async function deletePost(
         // DELETE
         // ======================================
         // ==========================================
-        // DELETE POST MEDIA FILE
-        // ==========================================
+// DELETE POST DOCUMENT
+// ==========================================
 
-        if (post.image) {
-            try {
-                const cleanPath = post.image.replace(/^\/+/, "");
+await Post.findByIdAndDelete(postId);
 
-                const filePath = path.join(
-                    process.cwd(),
-                    cleanPath
-                );
-
-                if (fs.existsSync(filePath)) {
-                    fs.unlinkSync(filePath);
-
-                    console.log(
-                        "POST MEDIA DELETED:",
-                        filePath
-                    );
-                }
-            } catch (fileError) {
-                console.error(
-                    "POST MEDIA DELETE ERROR:",
-                    fileError
-                );
-            }
-        }
+return res.json({
+    message: "Post deleted successfully"
+});
 
         // ==========================================
         // DELETE POST DOCUMENT
