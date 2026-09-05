@@ -1,4 +1,4 @@
-const CACHE_NAME = "vibeverse-v1";
+const CACHE_NAME = "vibeverse-v2";
 
 const urlsToCache = [
   "/",
