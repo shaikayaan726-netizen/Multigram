@@ -1627,16 +1627,52 @@ const currentUserImage =
     // Confirm Delete
     // ===========================
 
-    function handleConfirmDelete() {
+  async function handleConfirmDelete() {
 
-        if (
-            deletePostId === null
-        ) {
+    if (
+        deletePostId === null
+    ) {
 
-            return;
+        return;
 
-        }
+    }
 
+    try {
+
+        await api(
+            "/posts/" +
+            deletePostId,
+            {
+                method: "DELETE"
+            }
+        );
+
+
+        // ======================================
+        // REMOVE POST FROM HOME IMMEDIATELY
+        // ======================================
+
+        setPosts(
+            function (oldPosts) {
+
+                return oldPosts.filter(
+                    function (post) {
+
+                        return (
+                            String(post.id) !==
+                            String(deletePostId)
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+        // ======================================
+        // REMOVE FROM DELETED STATE
+        // ======================================
 
         setDeletedPosts(
             function (oldDeleted) {
@@ -1656,7 +1692,25 @@ const currentUserImage =
             "Post deleted"
         );
 
+
     }
+    catch (error) {
+
+        console.error(
+            "HOME DELETE POST ERROR:",
+            error
+        );
+
+        setDeletePostId(null);
+
+        showToast(
+            error.message ||
+            "Failed to delete post"
+        );
+
+    }
+
+}
 
 
     // ===========================
