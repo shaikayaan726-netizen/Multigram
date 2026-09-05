@@ -89,7 +89,14 @@ export function logout() {
         "token"
     );
 
-    window.location.href =
-        "/login";
+    localStorage.removeItem(
+        "user"
+    );
 
+    localStorage.removeItem(
+        "userId"
+    );
+
+    window.location.href =
+        "/";
 }

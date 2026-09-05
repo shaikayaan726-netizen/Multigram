@@ -635,9 +635,13 @@ function App() {
         ========================= */}
 
         <Route
-          path="/"
-          element={<Signup />}
-        />
+  path="/"
+  element={
+    localStorage.getItem("token")
+      ? <Home />
+      : <Signup />
+  }
+/>
 
         <Route
           path="/login"
