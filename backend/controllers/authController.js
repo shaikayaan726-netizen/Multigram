@@ -3,7 +3,14 @@ import jwt from "jsonwebtoken";
 
 import User from "../models/User.js";
 
-
+import Post from "../models/Post.js";
+import Reel from "../models/Reel.js";
+import Story from "../models/Story.js";
+import Comment from "../models/Comment.js";
+import Message from "../models/Message.js";
+import FollowRequest from "../models/FollowRequest.js";
+import fs from "fs";
+import path from "path";
 // ==========================================
 // JWT SECRET
 // ==========================================
@@ -1639,75 +1646,338 @@ export async function deactivateAccount(
 // PERMANENTLY DELETE ACCOUNT
 // ==========================================
 
+
+// ==========================================
+// PERMANENTLY DELETE ACCOUNT
+// ==========================================
+
 export async function deleteAccount(
     req,
     res
 ) {
-
     try {
 
-        const userId =
-            req.user.id;
+        const userId = req.user.id;
 
-
-        // ==========================================
-        // FIND USER
-        // ==========================================
-
-        const user =
-            await User.findById(
-                userId
-            );
-
+        const user = await User.findById(userId);
 
         if (!user) {
-
             return res.status(404).json({
-
-                message:
-                    "User not found"
-
+                message: "User not found"
             });
+        }
+
+
+        // ==========================================
+        // DELETE USER POSTS
+        // ==========================================
+
+        const userPosts = await Post.find({
+            author: userId
+        }).select("image");
+
+        for (const post of userPosts) {
+
+            if (post.image) {
+
+                try {
+
+                    const cleanPath =
+                        post.image.replace(/^\/+/, "");
+
+                    const filePath =
+                        path.join(
+                            process.cwd(),
+                            cleanPath
+                        );
+
+                    if (fs.existsSync(filePath)) {
+                        fs.unlinkSync(filePath);
+                    }
+
+                } catch (error) {
+
+                    console.error(
+                        "ACCOUNT POST MEDIA DELETE ERROR:",
+                        error
+                    );
+
+                }
+
+            }
+
+        }
+
+        await Post.deleteMany({
+            author: userId
+        });
+
+
+        // ==========================================
+        // DELETE USER REELS
+        // ==========================================
+
+        const userReels = await Reel.find({
+            author: userId
+        }).select("video");
+
+        for (const reel of userReels) {
+
+            if (reel.video) {
+
+                try {
+
+                    const cleanPath =
+                        reel.video.replace(/^\/+/, "");
+
+                    const filePath =
+                        path.join(
+                            process.cwd(),
+                            cleanPath
+                        );
+
+                    if (fs.existsSync(filePath)) {
+                        fs.unlinkSync(filePath);
+                    }
+
+                } catch (error) {
+
+                    console.error(
+                        "ACCOUNT REEL MEDIA DELETE ERROR:",
+                        error
+                    );
+
+                }
+
+            }
+
+        }
+
+        await Reel.deleteMany({
+            author: userId
+        });
+
+
+        // ==========================================
+        // DELETE USER STORIES
+        // ==========================================
+
+        const userStories = await Story.find({
+            user: userId
+        }).select("mediaUrl");
+
+        for (const story of userStories) {
+
+            if (story.mediaUrl) {
+
+                try {
+
+                    const cleanPath =
+                        story.mediaUrl.replace(/^\/+/, "");
+
+                    const filePath =
+                        path.join(
+                            process.cwd(),
+                            cleanPath
+                        );
+
+                    if (fs.existsSync(filePath)) {
+                        fs.unlinkSync(filePath);
+                    }
+
+                } catch (error) {
+
+                    console.error(
+                        "ACCOUNT STORY MEDIA DELETE ERROR:",
+                        error
+                    );
+
+                }
+
+            }
+
+        }
+
+        await Story.deleteMany({
+            user: userId
+        });
+
+
+        // ==========================================
+        // DELETE USER COMMENTS
+        // ==========================================
+
+        await Comment.deleteMany({
+            author: userId
+        });
+
+
+        // ==========================================
+        // DELETE USER MESSAGES
+        // SENT + RECEIVED
+        // ==========================================
+
+        await Message.deleteMany({
+            $or: [
+                {
+                    sender: userId
+                },
+                {
+                    receiver: userId
+                }
+            ]
+        });
+
+
+        // ==========================================
+        // DELETE FOLLOW REQUESTS
+        // SENT + RECEIVED
+        // ==========================================
+
+        await FollowRequest.deleteMany({
+            $or: [
+                {
+                    sender: userId
+                },
+                {
+                    receiver: userId
+                }
+            ]
+        });
+
+
+        // ==========================================
+        // REMOVE USER FROM OTHER USERS
+        // FOLLOWERS / FOLLOWING
+        // ==========================================
+
+        await User.updateMany(
+            {},
+            {
+                $pull: {
+                    followers: userId,
+                    following: userId
+                }
+            }
+        );
+
+
+        // ==========================================
+        // REMOVE USER FROM OTHER POSTS
+        // LIKES / SAVES / TAGGED USER
+        // ==========================================
+
+        await Post.updateMany(
+            {},
+            {
+                $pull: {
+                    likes: userId,
+                    saves: userId
+                }
+            }
+        );
+
+        await Post.updateMany(
+            {
+                taggedUser: userId
+            },
+            {
+                $set: {
+                    taggedUser: null
+                }
+            }
+        );
+
+
+        // ==========================================
+        // REMOVE USER FROM OTHER REELS
+        // LIKES / SAVES / SHARES / VIEWS
+        // ==========================================
+
+        await Reel.updateMany(
+            {},
+            {
+                $pull: {
+                    likes: userId,
+                    saves: userId,
+                    shares: userId,
+                    views: {
+                        user: userId
+                    }
+                }
+            }
+        );
+
+
+        // ==========================================
+        // REMOVE USER FROM OTHER COMMENTS
+        // COMMENT LIKES
+        // ==========================================
+
+        await Comment.updateMany(
+            {},
+            {
+                $pull: {
+                    likes: userId
+                }
+            }
+        );
+
+
+        // ==========================================
+        // DELETE PROFILE PICTURE
+        // ==========================================
+
+        if (user.profilePicture) {
+
+            try {
+
+                const cleanPath =
+                    user.profilePicture.replace(/^\/+/, "");
+
+                const filePath =
+                    path.join(
+                        process.cwd(),
+                        cleanPath
+                    );
+
+                if (fs.existsSync(filePath)) {
+                    fs.unlinkSync(filePath);
+                }
+
+            } catch (error) {
+
+                console.error(
+                    "ACCOUNT PROFILE IMAGE DELETE ERROR:",
+                    error
+                );
+
+            }
 
         }
 
 
         // ==========================================
-        // DELETE USER
+        // FINALLY DELETE USER
         // ==========================================
 
-        await User.findByIdAndDelete(
-            userId
-        );
+        await User.findByIdAndDelete(userId);
 
-
-        // ==========================================
-        // RESPONSE
-        // ==========================================
 
         return res.json({
-
-            message:
-                "Account deleted permanently"
-
+            message: "Account deleted permanently"
         });
 
-    }
-    catch (error) {
+    } catch (error) {
 
         console.error(
             "DELETE ACCOUNT ERROR:",
             error
         );
 
-
         return res.status(500).json({
-
-            message:
-                "Failed to delete account"
-
+            message: "Failed to delete account"
         });
 
     }
-
 }
