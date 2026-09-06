@@ -541,20 +541,82 @@ router.post(
             // ACCEPTED REQUEST
             // ==================================
 
-            if (
-                existingRequest &&
-                existingRequest.status ===
-                "accepted"
-            ) {
+          // ==================================
+// ACCEPTED REQUEST
+// ==================================
 
-                return res.json({
+if (
+    existingRequest &&
+    existingRequest.status ===
+    "accepted"
+) {
 
-                    message:
-                        "Already Following"
+    // ==================================
+    // REPAIR FOLLOWING
+    // ==================================
 
-                });
+    if (
+        !currentUser.following.some(
+            function(id) {
+
+                return (
+                    id.toString() ===
+                    receiver._id.toString()
+                );
 
             }
+        )
+    ) {
+
+        currentUser.following.push(
+            receiver._id
+        );
+
+    }
+
+
+    // ==================================
+    // REPAIR FOLLOWER
+    // ==================================
+
+    if (
+        !receiver.followers.some(
+            function(id) {
+
+                return (
+                    id.toString() ===
+                    currentUser._id.toString()
+                );
+
+            }
+        )
+    ) {
+
+        receiver.followers.push(
+            currentUser._id
+        );
+
+    }
+
+
+    await currentUser.save();
+    await receiver.save();
+
+
+    return res.json({
+
+        message:
+            "Already Following",
+
+        followersCount:
+            receiver.followers.length,
+
+        followingCount:
+            currentUser.following.length
+
+    });
+
+}
 
 
             // ==================================
@@ -1260,23 +1322,52 @@ router.delete(
                 );
 
 
-            await currentUser.save();
+          await currentUser.save();
 
-            await otherUser.save();
+await otherUser.save();
 
 
-            return res.json({
+// ==================================
+// REMOVE FOLLOW REQUEST
+// ==================================
 
-                message:
-                    "Unfollow Successful",
+await FollowRequest.deleteMany({
 
-                followersCount:
-                    otherUser.followers.length,
+    $or: [
 
-                followingCount:
-                    currentUser.following.length
+        {
+            sender:
+                currentUserId,
 
-            });
+            receiver:
+                otherUserId
+        },
+
+        {
+            sender:
+                otherUserId,
+
+            receiver:
+                currentUserId
+        }
+
+    ]
+
+});
+
+
+return res.json({
+
+    message:
+        "Unfollow Successful",
+
+    followersCount:
+        otherUser.followers.length,
+
+    followingCount:
+        currentUser.following.length
+
+});
 
         }
         catch(error) {
