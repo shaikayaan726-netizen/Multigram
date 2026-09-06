@@ -3,7 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 import {
     FiArrowLeft,
-    FiChevronRight
+    FiChevronRight,
+    FiUsers,
+    FiTrash2,
+    FiPauseCircle
 } from "react-icons/fi";
 
 import { api } from "../utils/api";
@@ -41,6 +44,8 @@ function Privacy() {
     const [privateAccount, setPrivateAccount] =
         useState(false);
 
+const [showAccountOwnership, setShowAccountOwnership] =
+    useState(false);
 
     const [activityStatus, setActivityStatus] =
         useState(true);
@@ -1042,46 +1047,220 @@ function Privacy() {
             </div>
 
 
-            {/* ==========================================
-                ACCOUNT OWNERSHIP
-            ========================================== */}
+           {/* ==========================================
+    ACCOUNT OWNERSHIP
+========================================== */}
 
-            <div className="privacy-section">
+<div className="privacy-section">
 
-                <h2>
+    <button
+        className="account-control-header"
+        onClick={function () {
+
+            setShowAccountOwnership(
+                !showAccountOwnership
+            );
+
+        }}
+    >
+
+        <div className="setting-left">
+
+            <span className="setting-icon">
+                <FiUsers />
+            </span>
+
+            <div>
+
+                <strong>
                     Account ownership and control
-                </h2>
+                </strong>
 
-
-                <div
-                    className="privacy-row"
-                    onClick={function () {
-
-                        openPage(
-                            "/accountownership"
-                        );
-
-                    }}
-                >
-
-                    <div>
-
-                        <strong>
-                            Account ownership and control
-                        </strong>
-
-                        <p>
-                            Deactivation, deletion and account information.
-                        </p>
-
-                    </div>
-
-                    <FiChevronRight />
-
-                </div>
+                <p>
+                    Deactivation and deletion
+                </p>
 
             </div>
 
+        </div>
+
+
+        <FiChevronRight
+            className={
+                showAccountOwnership
+                    ? "rotate-arrow"
+                    : ""
+            }
+        />
+
+    </button>
+
+
+    {showAccountOwnership && (
+
+        <div className="account-control-panel">
+
+            {/* TEMPORARY */}
+
+            <button
+                className="danger-row"
+                onClick={async function () {
+
+                    const confirmed =
+                        window.confirm(
+                            "Temporarily deactivate your account?"
+                        );
+
+                    if (!confirmed) {
+                        return;
+                    }
+
+                    try {
+
+                        await api(
+                            "/auth/deactivate",
+                            {
+                                method: "PUT"
+                            }
+                        );
+
+                        localStorage.removeItem("token");
+                        localStorage.removeItem("authToken");
+
+                        alert(
+                            "Account temporarily deactivated"
+                        );
+
+                        navigate(
+                            "/login",
+                            {
+                                replace: true
+                            }
+                        );
+
+                    } catch (error) {
+
+                        console.error(
+                            "DEACTIVATE ACCOUNT ERROR:",
+                            error
+                        );
+
+                        alert(
+                            error.message ||
+                            "Failed to deactivate account"
+                        );
+
+                    }
+
+                }}
+            >
+
+                <FiPauseCircle />
+
+                <div>
+
+                    <strong>
+                        Temporarily deactivate account
+                    </strong>
+
+                    <span>
+                        Hide your account temporarily.
+                    </span>
+
+                </div>
+
+            </button>
+
+
+            {/* PERMANENT */}
+
+            <button
+                className="danger-row delete-row"
+                onClick={async function () {
+
+                    const confirmDelete =
+                        window.confirm(
+                            "This will permanently delete your account. Continue?"
+                        );
+
+                    if (!confirmDelete) {
+                        return;
+                    }
+
+
+                    const finalConfirm =
+                        window.confirm(
+                            "This action cannot be undone. Delete account permanently?"
+                        );
+
+                    if (!finalConfirm) {
+                        return;
+                    }
+
+
+                    try {
+
+                        await api(
+                            "/auth/delete-account",
+                            {
+                                method: "DELETE"
+                            }
+                        );
+
+
+                        localStorage.clear();
+
+
+                        alert(
+                            "Account deleted permanently"
+                        );
+
+
+                        navigate(
+                            "/",
+                            {
+                                replace: true
+                            }
+                        );
+
+                    } catch (error) {
+
+                        console.error(
+                            "DELETE ACCOUNT ERROR:",
+                            error
+                        );
+
+                        alert(
+                            error.message ||
+                            "Failed to delete account"
+                        );
+
+                    }
+
+                }}
+            >
+
+                <FiTrash2 />
+
+                <div>
+
+                    <strong>
+                        Permanently delete account
+                    </strong>
+
+                    <span>
+                        Permanently remove your account.
+                    </span>
+
+                </div>
+
+            </button>
+
+        </div>
+
+    )}
+
+</div>
 
         </div>
 

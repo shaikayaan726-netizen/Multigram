@@ -148,54 +148,49 @@ function PostGallery() {
     // ==========================================
     // NEXT
     // ==========================================
-
-    function handleNext() {
-
-        if (
-            !selectedMedia ||
-            !selectedMedia.file
-        ) {
-
-            return;
-
-        }
-
-
-        navigate(
-            "/posteditor",
-            {
-
-                state: {
-
-                    // =================================
-                    // ACTUAL DEVICE FILE
-                    // =================================
-
-                    postFile:
-                        selectedMedia.file,
-
-
-                    // =================================
-                    // PREVIEW
-                    // =================================
-
-                    postImage:
-                        selectedMedia.preview,
-
-
-                    // =================================
-                    // MEDIA TYPE
-                    // =================================
-
-                    mediaType:
-                        selectedMedia.type
-
-                }
-
-            }
-        );
-
+async function handleNext() {
+    if (
+        !selectedMedia ||
+        !selectedMedia.file
+    ) {
+        return;
     }
+
+    try {
+        const file = selectedMedia.file;
+
+        const reader = new FileReader();
+
+        reader.onload = function () {
+            navigate(
+                "/posteditor",
+                {
+                    state: {
+                        // ACTUAL DEVICE FILE
+                        postFile:
+                            file,
+
+                        // PERSISTENT PREVIEW
+                        postImage:
+                            reader.result,
+
+                        // MEDIA TYPE
+                        mediaType:
+                            selectedMedia.type
+                    }
+                }
+            );
+        };
+
+        reader.readAsDataURL(file);
+    }
+    catch (error) {
+        console.error(
+            "POST IMAGE PREVIEW ERROR:",
+            error
+        );
+    }
+}
 
 
     // ==========================================

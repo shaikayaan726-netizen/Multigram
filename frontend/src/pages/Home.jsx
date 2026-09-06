@@ -2529,7 +2529,7 @@ function handleStoryClose() {
                 <div className="left">
 
                     <h1>
-                        Instagram
+                        Multigram
                     </h1>
 
                 </div>

@@ -912,162 +912,217 @@ posts:
     // FOLLOW
     // ===========================
 
-    async function handleFollow() {
+   async function handleFollow() {
 
-        try {
+    try {
 
-            // =================================
-            // ALREADY PENDING
-            // =================================
+        // =================================
+        // PROFILE CHECK
+        // =================================
 
-            if (
-                followStatus === "pending"
-            ) {
+        if (
+            !profile ||
+            !profile.id
+        ) {
 
-                console.log(
-                    "FOLLOW REQUEST ALREADY SENT"
-                );
+            return;
 
-                return;
-
-            }
+        }
 
 
-            // =================================
-            // ALREADY FOLLOWING
-            // =================================
+        // =================================
+        // CURRENT USER
+        // =================================
 
-            if (
-                followStatus === "accepted"
-            ) {
-
-                console.log(
-                    "ALREADY FOLLOWING"
-                );
-
-                return;
-
-            }
+        const meResponse =
+            await api("/auth/me");
 
 
-            // =================================
-            // PROFILE CHECK
-            // =================================
-
-            if (
-                !profile ||
-                !profile.id
-            ) {
-
-                return;
-
-            }
+        const currentUser =
+            meResponse.user;
 
 
-            // =================================
-            // CURRENT USER
-            // =================================
-
-            const meResponse =
-                await api("/auth/me");
+        const currentUserId =
+            currentUser?._id ||
+            currentUser?.id;
 
 
-            const currentUser =
-                meResponse.user;
+        // =================================
+        // PREVENT SELF FOLLOW
+        // =================================
+
+        if (
+            currentUserId &&
+            currentUserId.toString() ===
+            profile.id.toString()
+        ) {
+
+            console.log(
+                "CANNOT FOLLOW YOURSELF"
+            );
+
+            return;
+
+        }
 
 
-            // =================================
-            // CURRENT USER ID
-            // =================================
+        // =================================
+        // UNFOLLOW
+        // =================================
 
-            const currentUserId =
-                currentUser?._id ||
-                currentUser?.id;
+        if (
+            followStatus ===
+            "accepted"
+        ) {
 
-
-            // =================================
-            // PREVENT SELF FOLLOW
-            // =================================
-
-            if (
-                currentUserId &&
-                currentUserId.toString() ===
-                profile.id.toString()
-            ) {
-
-                console.log(
-                    "CANNOT FOLLOW YOURSELF"
-                );
-
-                return;
-
-            }
-
-
-            // =================================
-            // SEND FOLLOW REQUEST
-            // =================================
-
-            const followResponse =
+            const unfollowResponse =
                 await api(
-                    "/follow/" +
+                    "/unfollow/" +
                     profile.id,
                     {
-                        method: "POST"
+                        method: "DELETE"
                     }
                 );
 
 
             console.log(
-                "PROFILE FOLLOW RESPONSE:",
-                followResponse
+                "UNFOLLOW RESPONSE:",
+                unfollowResponse
             );
 
 
             // =================================
-            // REQUEST SENT
+            // UPDATE PROFILE COUNTS
             // =================================
 
-            if (
-                followResponse.message ===
-                    "Follow Request Sent" ||
-                followResponse.message ===
-                    "Follow Request Already Sent"
-            ) {
+            setProfile(function (oldProfile) {
 
-                setFollowStatus(
-                    "pending"
-                );
+                return {
 
-            }
+                    ...oldProfile,
+
+                    followers:
+                        unfollowResponse.followersCount,
+
+                    following:
+                        oldProfile.following
+
+                };
+
+            });
 
 
             // =================================
-            // ALREADY FOLLOWING
+            // UPDATE FOLLOW STATUS
             // =================================
 
-            if (
-                followResponse.message ===
-                "Already Following"
-            ) {
+            setFollowStatus(null);
 
-                setFollowStatus(
-                    "accepted"
-                );
 
-            }
+            return;
 
         }
-        catch (error) {
 
-            console.error(
-                "PROFILE FOLLOW ERROR:",
-                error
+
+        // =================================
+        // ALREADY PENDING
+        // =================================
+
+        if (
+            followStatus ===
+            "pending"
+        ) {
+
+            console.log(
+                "FOLLOW REQUEST ALREADY SENT"
             );
+
+            return;
+
+        }
+
+
+        // =================================
+        // SEND FOLLOW REQUEST
+        // =================================
+
+        const followResponse =
+            await api(
+                "/follow/" +
+                profile.id,
+                {
+                    method: "POST"
+                }
+            );
+
+
+        console.log(
+            "PROFILE FOLLOW RESPONSE:",
+            followResponse
+        );
+
+
+        // =================================
+        // REQUEST SENT
+        // =================================
+
+        if (
+            followResponse.message ===
+                "Follow Request Sent" ||
+            followResponse.message ===
+                "Follow Request Already Sent"
+        ) {
+
+            setFollowStatus(
+                "pending"
+            );
+
+        }
+
+
+        // =================================
+        // ALREADY FOLLOWING
+        // =================================
+
+        if (
+            followResponse.message ===
+            "Already Following"
+        ) {
+
+            setFollowStatus(
+                "accepted"
+            );
+
+
+            setProfile(function (oldProfile) {
+
+                return {
+
+                    ...oldProfile,
+
+                    followers:
+                        followResponse.followersCount,
+
+                    following:
+                        oldProfile.following
+
+                };
+
+            });
 
         }
 
     }
+    catch (error) {
+
+        console.error(
+            "PROFILE FOLLOW ERROR:",
+            error
+        );
+
+    }
+
+}
 
 
     // ===========================

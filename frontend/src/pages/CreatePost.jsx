@@ -93,7 +93,9 @@ function CreatePost() {
     );
 
     const [postFile, setPostFile] = useState(
-    location.state?.postFile || null
+    location.state?.postFile instanceof File
+        ? location.state.postFile
+        : null
 );
 
 const [mediaType, setMediaType] = useState(
@@ -182,12 +184,12 @@ const [mediaType, setMediaType] = useState(
             );
 
         }
-        if (state.postFile !== undefined) {
-
+       if (state.postFile !== undefined) {
     setPostFile(
-        state.postFile
+        state.postFile instanceof File
+            ? state.postFile
+            : null
     );
-
 }
 
 if (state.mediaType !== undefined) {

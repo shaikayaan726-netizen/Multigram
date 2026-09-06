@@ -81,7 +81,7 @@ function Acknowledgements() {
 
 
                 <p className="acknowledgement-footer">
-                    Built with care for this Instagram Clone project.
+                    Built with care for this Multigram Clone project.
                 </p>
 
             </div>

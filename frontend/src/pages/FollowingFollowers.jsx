@@ -135,7 +135,7 @@ function FollowingFollowers() {
                 />
 
                 <p>
-                    John Appleseed, who you might know, is on Instagram.
+                    John Appleseed, who you might know, is on Multigram.
                 </p>
 
             </section>

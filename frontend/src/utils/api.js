@@ -1,4 +1,8 @@
-export const API_BASE = "/api";
+import { Capacitor } from "@capacitor/core";
+
+export const API_BASE = Capacitor.isNativePlatform()
+    ? "https://multigram.onrender.com/api"
+    : "/api";
 
 export function token() {
     return localStorage.getItem("token") || "";

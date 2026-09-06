@@ -67,13 +67,16 @@ function About() {
 
             <div className="about-app-card">
 
-                <div className="about-logo">
-                    I
-                </div>
+              <div className="about-logo">
+    <img
+        src="https://i.postimg.cc/zGLgy81h/icon-512.jpg"
+        alt="Multigram"
+    />
+</div>
 
 
                 <h2>
-                    Instagram Clone
+                    Multigram
                 </h2>
 
 
@@ -291,7 +294,7 @@ function About() {
 
             <div className="about-version">
 
-                Instagram Clone
+                Multigram
 
                 <br />
 

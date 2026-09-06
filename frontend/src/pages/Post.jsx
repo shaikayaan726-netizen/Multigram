@@ -406,6 +406,8 @@ useEffect(function () {
     // ==========================================
 
     async function handleDelete() {
+        
+         console.log("DELETE BUTTON CLICKED");
 
         if (!post) {
 

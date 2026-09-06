@@ -209,64 +209,33 @@ function TagPeople() {
         };
     }, [search]);
 
-    function handleSelectUser(user) {
-        const userId =
-            user._id ||
-            user.id;
+ function handleSelectUser(user) {
+    const userId =
+        user._id ||
+        user.id;
 
-        if (!userId) {
-            return;
-        }
-
-        const selectedUser = {
-            _id: userId,
-            username:
-                user.username || "",
-            fullName:
-                user.fullName || "",
-            profilePicture:
-                user.profilePicture || "",
-            image:
-                user.profilePicture || ""
-        };
-
-        setSelectedUsers(
-            function (previousUsers) {
-                const alreadySelected =
-                    previousUsers.some(
-                        function (item) {
-                            return (
-                                String(
-                                    item._id ||
-                                    item.id
-                                ) ===
-                                String(userId)
-                            );
-                        }
-                    );
-
-                if (alreadySelected) {
-                    return previousUsers.filter(
-                        function (item) {
-                            return (
-                                String(
-                                    item._id ||
-                                    item.id
-                                ) !==
-                                String(userId)
-                            );
-                        }
-                    );
-                }
-
-                return [
-                    ...previousUsers,
-                    selectedUser
-                ];
-            }
-        );
+    if (!userId) {
+        return;
     }
 
+    const selectedUser = {
+        _id: userId,
+        username:
+            user.username || "",
+        fullName:
+            user.fullName || "",
+        profilePicture:
+            user.profilePicture || "",
+        image:
+            user.profilePicture || ""
+    };
+
+    setSelectedUsers(
+        function () {
+            return [selectedUser];
+        }
+    );
+}
     function handleDone() {
         const previousState =
             location.state || {};
